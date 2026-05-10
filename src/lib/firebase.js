@@ -11,8 +11,24 @@ const firebaseConfig = {
   appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
-export const adminEmail =
-  import.meta.env.VITE_ADMIN_EMAIL || 'cherryliao43@gmail.com';
+const defaultAdminEmails = ['cherryliao43@gmail.com', 'sela21depot@gmail.com'];
+
+export const adminEmails = [
+  import.meta.env.VITE_ADMIN_EMAILS,
+  import.meta.env.VITE_ADMIN_EMAIL,
+  defaultAdminEmails.join(','),
+]
+  .filter(Boolean)
+  .join(',')
+  .split(',')
+  .map((email) => email.trim().toLowerCase())
+  .filter(Boolean);
+
+export const adminEmail = adminEmails[0] || defaultAdminEmails[0];
+
+export function isAdminEmail(email) {
+  return Boolean(email && adminEmails.includes(email.trim().toLowerCase()));
+}
 
 export const hasFirebaseConfig = Boolean(
   firebaseConfig.apiKey &&

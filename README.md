@@ -6,6 +6,7 @@
 
 ```text
 cherryliao43@gmail.com
+sela21depot@gmail.com
 ```
 
 ## 当前 SKU 数据
@@ -155,7 +156,7 @@ warehouseLocations
 - 保存失败时不会改本地数据，并会显示错误提示
 - 当前数据结构只使用 `code` 表示货位；如果某条记录本身已有 `location` 字段，拖拽时会同步更新它
 
-普通首页 `/` 没有拖拽能力，Firestore Rules 仍然只允许 `cherryliao43@gmail.com` 写入。
+普通首页 `/` 没有拖拽能力，Firestore Rules 仍然只允许 `cherryliao43@gmail.com` 和 `sela21depot@gmail.com` 写入。
 
 ## 状态颜色
 
@@ -177,7 +178,7 @@ VITE_FIREBASE_PROJECT_ID=your_project_id
 VITE_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
 VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
 VITE_FIREBASE_APP_ID=your_app_id
-VITE_ADMIN_EMAIL=cherryliao43@gmail.com
+VITE_ADMIN_EMAILS=cherryliao43@gmail.com,sela21depot@gmail.com
 ```
 
 未配置 Firebase 时，首页会读取 `data/warehouse.json`，后台写入不可用。
@@ -191,7 +192,10 @@ allow read: if true;
 
 allow create, update, delete:
 if request.auth != null
-&& request.auth.token.email == "cherryliao43@gmail.com";
+&& request.auth.token.email in [
+  "cherryliao43@gmail.com",
+  "sela21depot@gmail.com"
+];
 ```
 
 部署规则：

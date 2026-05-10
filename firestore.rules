@@ -7,7 +7,10 @@ service cloud.firestore {
 
       allow create, update, delete:
       if request.auth != null
-      && request.auth.token.email == "cherryliao43@gmail.com";
+      && request.auth.token.email in [
+        "cherryliao43@gmail.com",
+        "sela21depot@gmail.com"
+      ];
     }
   }
 }

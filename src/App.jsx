@@ -9,7 +9,7 @@ import LocationModal from './components/LocationModal.jsx';
 import Login from './components/Login.jsx';
 import AdminPanel from './components/AdminPanel.jsx';
 import { locationMatches } from './components/LocationCell.jsx';
-import { adminEmail, auth, hasFirebaseConfig } from './lib/firebase.js';
+import { auth, hasFirebaseConfig, isAdminEmail } from './lib/firebase.js';
 import { subscribeWarehouseData } from './lib/warehouseService.js';
 
 function countLocations(data) {
@@ -64,10 +64,7 @@ function App() {
     });
   }, []);
 
-  const isAdmin = Boolean(
-    currentUser?.email &&
-      currentUser.email.toLowerCase() === adminEmail.toLowerCase(),
-  );
+  const isAdmin = isAdminEmail(currentUser?.email);
 
   return (
     <Routes>

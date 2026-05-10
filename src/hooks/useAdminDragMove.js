@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { saveWarehouseItemsBatch } from '../lib/warehouseService.js';
+import { migrateLegacyLocationCode, parseLocationCode } from '../lib/locationCode.js';
 
 export function useAdminDragMove(warehouseData) {
   const [moving, setMoving] = useState(false);
@@ -73,10 +74,13 @@ function findLocation(data, code) {
     for (let rackIndex = 0; rackIndex < (zone.racks || []).length; rackIndex += 1) {
       const rack = zone.racks[rackIndex];
       const locationIndex = (rack.locations || []).findIndex(
-        (location) => location.code === code,
+        (location) => migrateLegacyLocationCode(location.code) === code,
       );
 
       if (locationIndex >= 0) {
+        rack.locations[locationIndex].code = migrateLegacyLocationCode(
+          rack.locations[locationIndex].code,
+        );
         return {
           location: rack.locations[locationIndex],
           locationIndex,
@@ -94,8 +98,8 @@ function findSlot(data, code) {
   const explicitLocation = findLocation(data, code);
   if (explicitLocation) return explicitLocation;
 
-  const rackPrefix = code.match(/^([A-Z]+\d+)-/i)?.[1];
-  if (!rackPrefix) return null;
+  const parsedCode = parseLocationCode(code);
+  if (!parsedCode) return null;
 
   for (let zoneIndex = 0; zoneIndex < data.length; zoneIndex += 1) {
     const zone = data[zoneIndex];
@@ -103,10 +107,13 @@ function findSlot(data, code) {
 
     for (let rackIndex = 0; rackIndex < (zone.racks || []).length; rackIndex += 1) {
       const rack = zone.racks[rackIndex];
-      const currentPrefix =
-        rack.rackName.match(/[A-Z]+\d+/i)?.[0] || rack.rackName.replace(/\s/g, '');
+      const currentPrefix = rack.rackName.match(/([A-Z])(\d+)/i);
 
-      if (currentPrefix.toLowerCase() === rackPrefix.toLowerCase()) {
+      if (
+        currentPrefix &&
+        currentPrefix[1].toUpperCase() === parsedCode.zoneLetter &&
+        Number(currentPrefix[2]) === parsedCode.rackNumber
+      ) {
         return {
           location: null,
           locationIndex: -1,

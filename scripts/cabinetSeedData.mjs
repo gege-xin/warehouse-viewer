@@ -1,3 +1,5 @@
+import { formatLocationCode } from './locationCode.mjs';
+
 export const cabinetCategories = [
   {
     category: 'Base Cabinet',
@@ -126,7 +128,7 @@ export function buildCabinetSkuSeed() {
       for (let slot = 0; slot < rackCapacity && skuIndex < skus.length; slot += 1) {
         const level = Math.floor(slot / rackColumns) + 1;
         const column = (slot % rackColumns) + 1;
-        const code = `${zoneLetter}${rackNumber}-${String(level).padStart(2, '0')}-${String(column).padStart(2, '0')}`;
+        const code = formatLocationCode(zoneLetter, rackNumber, column, level);
 
         locations.push({
           ...skus[skuIndex],

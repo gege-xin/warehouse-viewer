@@ -1,4 +1,9 @@
 import LocationCell from './LocationCell.jsx';
+import {
+  formatLocationCode,
+  getRackCodePrefixFromRackName,
+  migrateLegacyLocationCode,
+} from '../lib/locationCode.js';
 
 export function getRackPrefix(rackName) {
   return rackName.match(/[A-Z]\d+/i)?.[0] || rackName.replace(/\s/g, '');
@@ -6,20 +11,39 @@ export function getRackPrefix(rackName) {
 
 export function buildLocations(rack) {
   const explicitLocations = rack.locations || [];
-  const byCode = new Map(explicitLocations.map((location) => [location.code, location]));
-  const prefix = getRackPrefix(rack.rackName);
+  const byCode = new Map(
+    explicitLocations.map((location) => [
+      migrateLegacyLocationCode(location.code),
+      {
+        ...location,
+        code: migrateLegacyLocationCode(location.code),
+      },
+    ]),
+  );
+  const rackPrefix = getRackCodePrefixFromRackName(rack.rackName);
+  const levels = Math.min(3, Number(rack.levels || 3));
   const locations = [];
   let linearIndex = 0;
 
-  for (let level = 1; level <= Number(rack.levels || 0); level += 1) {
+  for (let level = 1; level <= levels; level += 1) {
     for (let column = 1; column <= Number(rack.columns || 0); column += 1) {
-      const code = `${prefix}-${String(level).padStart(2, '0')}-${String(
-        column,
-      ).padStart(2, '0')}`;
+      const code = rackPrefix
+        ? formatLocationCode(
+            rackPrefix.zoneLetter,
+            rackPrefix.rackNumber,
+            column,
+            level,
+          )
+        : `${getRackPrefix(rack.rackName)}-C${String(column).padStart(2, '0')}-L${level}`;
 
       locations.push(
         byCode.get(code) ||
-          explicitLocations[linearIndex] || {
+          (explicitLocations[linearIndex]
+            ? {
+                ...explicitLocations[linearIndex],
+                code: migrateLegacyLocationCode(explicitLocations[linearIndex].code),
+              }
+            : null) || {
             code,
             model: '',
             qty: 0,

@@ -8,7 +8,8 @@
     "build": "vite build",
     "preview": "vite preview --host 0.0.0.0",
     "generate:seed": "node scripts/generateWarehouseSeed.mjs",
-    "import:seed": "node scripts/importFirestoreSeed.mjs"
+    "import:seed": "node scripts/importFirestoreSeed.mjs",
+    "migrate:codes": "node scripts/migrateLocationCodes.mjs"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",

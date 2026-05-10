@@ -58,49 +58,57 @@ export const cabinetColors = [
 ];
 
 const warehousePlan = [
-  {
-    type: 'zone',
-    order: 1,
-    nameCn: 'A区',
-    nameEn: 'Zone A',
-    rackCount: 4,
-  },
+  { type: 'zone', order: 1, nameCn: 'A区', nameEn: 'Zone A' },
   {
     type: 'aisle',
     order: 2,
-    nameCn: '主走廊',
-    nameEn: 'Main Aisle',
-    aisleType: 'main',
+    aisleType: 'forklift',
+    nameCn: '叉车通道',
+    nameEn: 'Forklift Aisle',
   },
-  {
-    type: 'zone',
-    order: 3,
-    nameCn: 'B区',
-    nameEn: 'Zone B',
-    rackCount: 3,
-  },
+  { type: 'zone', order: 3, nameCn: 'B区', nameEn: 'Zone B' },
   {
     type: 'aisle',
     order: 4,
+    aisleType: 'forklift',
     nameCn: '叉车通道',
     nameEn: 'Forklift Aisle',
-    aisleType: 'forklift',
   },
+  { type: 'zone', order: 5, nameCn: 'C区', nameEn: 'Zone C' },
   {
-    type: 'zone',
-    order: 5,
-    nameCn: 'C区',
-    nameEn: 'Zone C',
-    rackCount: 3,
+    type: 'aisle',
+    order: 6,
+    aisleType: 'main',
+    nameCn: '主走廊',
+    nameEn: 'Main Aisle',
   },
+  { type: 'zone', order: 7, nameCn: 'D区', nameEn: 'Zone D' },
+  {
+    type: 'aisle',
+    order: 8,
+    aisleType: 'forklift',
+    nameCn: '叉车通道',
+    nameEn: 'Forklift Aisle',
+  },
+  { type: 'zone', order: 9, nameCn: 'E区', nameEn: 'Zone E' },
+  {
+    type: 'aisle',
+    order: 10,
+    aisleType: 'forklift',
+    nameCn: '叉车通道',
+    nameEn: 'Forklift Aisle',
+  },
+  { type: 'zone', order: 11, nameCn: 'F区', nameEn: 'Zone F' },
 ];
 
 const rackColumns = 5;
-const rackLevels = 10;
+const rackLevels = 3;
 const rackCapacity = rackColumns * rackLevels;
 
 export function buildCabinetSkuSeed() {
   const skus = buildCabinetSkus();
+  const zones = warehousePlan.filter((item) => item.type === 'zone');
+  const racksPerZone = Math.ceil(skus.length / rackCapacity / zones.length);
   let skuIndex = 0;
 
   return warehousePlan.map((item) => {
@@ -109,7 +117,7 @@ export function buildCabinetSkuSeed() {
     }
 
     const zoneLetter = item.nameEn.replace('Zone ', '');
-    const racks = Array.from({ length: item.rackCount }, (_, rackIndex) => {
+    const racks = Array.from({ length: racksPerZone }, (_, rackIndex) => {
       const rackNumber = rackIndex + 1;
       const rackName = `${zoneLetter}${rackNumber}货架`;
       const rackNameEn = `Rack ${zoneLetter}${rackNumber}`;

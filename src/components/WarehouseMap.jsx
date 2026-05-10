@@ -10,6 +10,7 @@ function WarehouseMap({
   onSelectLocation,
 }) {
   const mapRef = useRef(null);
+  const layoutRows = buildWarehouseLayoutRows(data);
 
   useEffect(() => {
     if (!mapRef.current) return;
@@ -40,7 +41,7 @@ function WarehouseMap({
 
       <div className="overflow-x-auto pb-2 [-webkit-overflow-scrolling:touch]" ref={mapRef}>
         <div className="flex min-w-[760px] flex-col gap-4 sm:min-w-[920px]">
-          {data.map((item, index) => {
+          {layoutRows.map((item, index) => {
             if (item.type === 'aisle') {
               return (
                 <AisleBand
@@ -68,10 +69,67 @@ function WarehouseMap({
   );
 }
 
+export function buildWarehouseLayoutRows(data) {
+  const zonesByLetter = new Map();
+  const zoneRows = ['A', 'B', 'C', 'D', 'E', 'F'];
+
+  data
+    .filter((item) => item.type === 'zone')
+    .forEach((zone) => {
+      const letter = getZoneLetter(zone);
+      if (letter) zonesByLetter.set(letter, zone);
+    });
+
+  return zoneRows.flatMap((letter, index) => {
+    const zone =
+      zonesByLetter.get(letter) || createEmptyZone(letter, index * 2 + 1);
+    const next =
+      letter === 'A' || letter === 'B' || letter === 'D' || letter === 'E'
+        ? createAisle('forklift', index * 2 + 2)
+        : letter === 'C'
+          ? createAisle('main', index * 2 + 2)
+          : null;
+
+    return next ? [zone, next] : [zone];
+  });
+}
+
+function getZoneLetter(zone) {
+  return String(zone.nameEn || zone.nameCn || '')
+    .match(/Zone\s+([A-Z])|([A-Z])\s*区/i)
+    ?.slice(1)
+    .find(Boolean)
+    ?.toUpperCase();
+}
+
+function createEmptyZone(letter, order) {
+  return {
+    type: 'zone',
+    order,
+    nameCn: `${letter}区`,
+    nameEn: `Zone ${letter}`,
+    racks: [],
+    isSynthetic: true,
+  };
+}
+
+function createAisle(aisleType, order) {
+  const isMain = aisleType === 'main';
+
+  return {
+    type: 'aisle',
+    order,
+    aisleType,
+    nameCn: isMain ? '主走廊' : '叉车通道',
+    nameEn: isMain ? 'Main Aisle' : 'Forklift Aisle',
+    isSynthetic: true,
+  };
+}
+
 export function AisleBand({ aisle }) {
   const isMain = aisle.aisleType === 'main' || aisle.nameEn === 'Main Aisle';
   const className = isMain
-    ? 'h-20 border-slate-500 bg-slate-300 text-slate-800'
+    ? 'h-24 border-slate-600 bg-slate-300 text-slate-900'
     : 'h-16 border-slate-400 bg-slate-200 text-slate-700';
 
   return (
@@ -79,7 +137,7 @@ export function AisleBand({ aisle }) {
       className={`flex items-center justify-center rounded-md border border-dashed px-4 text-sm font-bold ${className}`}
       aria-label={`${aisle.nameCn} / ${aisle.nameEn}`}
     >
-      {aisle.nameCn} / {aisle.nameEn}
+      {isMain ? '主走廊 / Main Aisle' : '叉车通道 / Forklift Aisle'}
     </div>
   );
 }

@@ -9,7 +9,7 @@
         "rackName": "A1货架",
         "rackNameEn": "Rack A1",
         "columns": 5,
-        "levels": 10,
+        "levels": 3,
         "locations": [
           {
             "model": "BOX-B09",
@@ -211,7 +211,15 @@
             "code": "A1-03-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
-          },
+          }
+        ]
+      },
+      {
+        "rackName": "A2货架",
+        "rackNameEn": "Rack A2",
+        "columns": 5,
+        "levels": 3,
+        "locations": [
           {
             "model": "BOX-B18",
             "type": "box",
@@ -219,7 +227,7 @@
             "categoryCn": "地柜",
             "cabinetModel": "B18",
             "qty": 0,
-            "code": "A1-04-01",
+            "code": "A2-01-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -233,7 +241,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "B18",
             "qty": 0,
-            "code": "A1-04-02",
+            "code": "A2-01-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -247,7 +255,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "B18",
             "qty": 0,
-            "code": "A1-04-03",
+            "code": "A2-01-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -261,7 +269,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "B18",
             "qty": 0,
-            "code": "A1-04-04",
+            "code": "A2-01-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -275,7 +283,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "B18",
             "qty": 0,
-            "code": "A1-04-05",
+            "code": "A2-01-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -286,7 +294,7 @@
             "categoryCn": "地柜",
             "cabinetModel": "B21",
             "qty": 0,
-            "code": "A1-05-01",
+            "code": "A2-02-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -300,7 +308,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "B21",
             "qty": 0,
-            "code": "A1-05-02",
+            "code": "A2-02-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -314,7 +322,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "B21",
             "qty": 0,
-            "code": "A1-05-03",
+            "code": "A2-02-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -328,7 +336,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "B21",
             "qty": 0,
-            "code": "A1-05-04",
+            "code": "A2-02-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -342,7 +350,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "B21",
             "qty": 0,
-            "code": "A1-05-05",
+            "code": "A2-02-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -353,7 +361,7 @@
             "categoryCn": "地柜",
             "cabinetModel": "B24",
             "qty": 0,
-            "code": "A1-06-01",
+            "code": "A2-03-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -367,7 +375,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "B24",
             "qty": 0,
-            "code": "A1-06-02",
+            "code": "A2-03-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -381,7 +389,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "B24",
             "qty": 0,
-            "code": "A1-06-03",
+            "code": "A2-03-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -395,7 +403,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "B24",
             "qty": 0,
-            "code": "A1-06-04",
+            "code": "A2-03-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -409,10 +417,18 @@
             "colorNameCn": "深灰",
             "cabinetModel": "B24",
             "qty": 0,
-            "code": "A1-06-05",
+            "code": "A2-03-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
-          },
+          }
+        ]
+      },
+      {
+        "rackName": "A3货架",
+        "rackNameEn": "Rack A3",
+        "columns": 5,
+        "levels": 3,
+        "locations": [
           {
             "model": "BOX-B27",
             "type": "box",
@@ -420,7 +436,7 @@
             "categoryCn": "地柜",
             "cabinetModel": "B27",
             "qty": 0,
-            "code": "A1-07-01",
+            "code": "A3-01-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -434,7 +450,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "B27",
             "qty": 0,
-            "code": "A1-07-02",
+            "code": "A3-01-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -448,7 +464,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "B27",
             "qty": 0,
-            "code": "A1-07-03",
+            "code": "A3-01-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -462,7 +478,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "B27",
             "qty": 0,
-            "code": "A1-07-04",
+            "code": "A3-01-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -476,7 +492,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "B27",
             "qty": 0,
-            "code": "A1-07-05",
+            "code": "A3-01-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -487,7 +503,7 @@
             "categoryCn": "地柜",
             "cabinetModel": "B30",
             "qty": 0,
-            "code": "A1-08-01",
+            "code": "A3-02-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -501,7 +517,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "B30",
             "qty": 0,
-            "code": "A1-08-02",
+            "code": "A3-02-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -515,7 +531,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "B30",
             "qty": 0,
-            "code": "A1-08-03",
+            "code": "A3-02-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -529,7 +545,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "B30",
             "qty": 0,
-            "code": "A1-08-04",
+            "code": "A3-02-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -543,7 +559,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "B30",
             "qty": 0,
-            "code": "A1-08-05",
+            "code": "A3-02-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -554,7 +570,7 @@
             "categoryCn": "地柜",
             "cabinetModel": "B33",
             "qty": 0,
-            "code": "A1-09-01",
+            "code": "A3-03-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -568,7 +584,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "B33",
             "qty": 0,
-            "code": "A1-09-02",
+            "code": "A3-03-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -582,7 +598,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "B33",
             "qty": 0,
-            "code": "A1-09-03",
+            "code": "A3-03-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -596,7 +612,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "B33",
             "qty": 0,
-            "code": "A1-09-04",
+            "code": "A3-03-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -610,10 +626,18 @@
             "colorNameCn": "深灰",
             "cabinetModel": "B33",
             "qty": 0,
-            "code": "A1-09-05",
+            "code": "A3-03-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
-          },
+          }
+        ]
+      },
+      {
+        "rackName": "A4货架",
+        "rackNameEn": "Rack A4",
+        "columns": 5,
+        "levels": 3,
+        "locations": [
           {
             "model": "BOX-B36",
             "type": "box",
@@ -621,7 +645,7 @@
             "categoryCn": "地柜",
             "cabinetModel": "B36",
             "qty": 0,
-            "code": "A1-10-01",
+            "code": "A4-01-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -635,7 +659,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "B36",
             "qty": 0,
-            "code": "A1-10-02",
+            "code": "A4-01-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -649,7 +673,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "B36",
             "qty": 0,
-            "code": "A1-10-03",
+            "code": "A4-01-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -663,7 +687,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "B36",
             "qty": 0,
-            "code": "A1-10-04",
+            "code": "A4-01-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -677,18 +701,10 @@
             "colorNameCn": "深灰",
             "cabinetModel": "B36",
             "qty": 0,
-            "code": "A1-10-05",
+            "code": "A4-01-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
-          }
-        ]
-      },
-      {
-        "rackName": "A2货架",
-        "rackNameEn": "Rack A2",
-        "columns": 5,
-        "levels": 10,
-        "locations": [
+          },
           {
             "model": "BOX-B39",
             "type": "box",
@@ -696,7 +712,7 @@
             "categoryCn": "地柜",
             "cabinetModel": "B39",
             "qty": 0,
-            "code": "A2-01-01",
+            "code": "A4-02-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -710,7 +726,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "B39",
             "qty": 0,
-            "code": "A2-01-02",
+            "code": "A4-02-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -724,7 +740,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "B39",
             "qty": 0,
-            "code": "A2-01-03",
+            "code": "A4-02-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -738,7 +754,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "B39",
             "qty": 0,
-            "code": "A2-01-04",
+            "code": "A4-02-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -752,7 +768,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "B39",
             "qty": 0,
-            "code": "A2-01-05",
+            "code": "A4-02-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -763,7 +779,7 @@
             "categoryCn": "地柜",
             "cabinetModel": "B42",
             "qty": 0,
-            "code": "A2-02-01",
+            "code": "A4-03-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -777,7 +793,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "B42",
             "qty": 0,
-            "code": "A2-02-02",
+            "code": "A4-03-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -791,7 +807,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "B42",
             "qty": 0,
-            "code": "A2-02-03",
+            "code": "A4-03-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -805,7 +821,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "B42",
             "qty": 0,
-            "code": "A2-02-04",
+            "code": "A4-03-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -819,10 +835,18 @@
             "colorNameCn": "深灰",
             "cabinetModel": "B42",
             "qty": 0,
-            "code": "A2-02-05",
+            "code": "A4-03-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
-          },
+          }
+        ]
+      },
+      {
+        "rackName": "A5货架",
+        "rackNameEn": "Rack A5",
+        "columns": 5,
+        "levels": 3,
+        "locations": [
           {
             "model": "BOX-DB12",
             "type": "box",
@@ -830,7 +854,7 @@
             "categoryCn": "抽屉地柜",
             "cabinetModel": "DB12",
             "qty": 0,
-            "code": "A2-03-01",
+            "code": "A5-01-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -844,7 +868,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "DB12",
             "qty": 0,
-            "code": "A2-03-02",
+            "code": "A5-01-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -858,7 +882,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "DB12",
             "qty": 0,
-            "code": "A2-03-03",
+            "code": "A5-01-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -872,7 +896,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "DB12",
             "qty": 0,
-            "code": "A2-03-04",
+            "code": "A5-01-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -886,7 +910,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "DB12",
             "qty": 0,
-            "code": "A2-03-05",
+            "code": "A5-01-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -897,7 +921,7 @@
             "categoryCn": "抽屉地柜",
             "cabinetModel": "DB15",
             "qty": 0,
-            "code": "A2-04-01",
+            "code": "A5-02-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -911,7 +935,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "DB15",
             "qty": 0,
-            "code": "A2-04-02",
+            "code": "A5-02-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -925,7 +949,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "DB15",
             "qty": 0,
-            "code": "A2-04-03",
+            "code": "A5-02-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -939,7 +963,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "DB15",
             "qty": 0,
-            "code": "A2-04-04",
+            "code": "A5-02-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -953,7 +977,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "DB15",
             "qty": 0,
-            "code": "A2-04-05",
+            "code": "A5-02-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -964,7 +988,7 @@
             "categoryCn": "抽屉地柜",
             "cabinetModel": "DB18",
             "qty": 0,
-            "code": "A2-05-01",
+            "code": "A5-03-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -978,7 +1002,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "DB18",
             "qty": 0,
-            "code": "A2-05-02",
+            "code": "A5-03-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -992,7 +1016,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "DB18",
             "qty": 0,
-            "code": "A2-05-03",
+            "code": "A5-03-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1006,7 +1030,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "DB18",
             "qty": 0,
-            "code": "A2-05-04",
+            "code": "A5-03-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1020,10 +1044,18 @@
             "colorNameCn": "深灰",
             "cabinetModel": "DB18",
             "qty": 0,
-            "code": "A2-05-05",
+            "code": "A5-03-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
-          },
+          }
+        ]
+      },
+      {
+        "rackName": "A6货架",
+        "rackNameEn": "Rack A6",
+        "columns": 5,
+        "levels": 3,
+        "locations": [
           {
             "model": "BOX-DB21",
             "type": "box",
@@ -1031,7 +1063,7 @@
             "categoryCn": "抽屉地柜",
             "cabinetModel": "DB21",
             "qty": 0,
-            "code": "A2-06-01",
+            "code": "A6-01-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1045,7 +1077,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "DB21",
             "qty": 0,
-            "code": "A2-06-02",
+            "code": "A6-01-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1059,7 +1091,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "DB21",
             "qty": 0,
-            "code": "A2-06-03",
+            "code": "A6-01-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1073,7 +1105,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "DB21",
             "qty": 0,
-            "code": "A2-06-04",
+            "code": "A6-01-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1087,7 +1119,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "DB21",
             "qty": 0,
-            "code": "A2-06-05",
+            "code": "A6-01-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1098,7 +1130,7 @@
             "categoryCn": "抽屉地柜",
             "cabinetModel": "DB24",
             "qty": 0,
-            "code": "A2-07-01",
+            "code": "A6-02-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1112,7 +1144,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "DB24",
             "qty": 0,
-            "code": "A2-07-02",
+            "code": "A6-02-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1126,7 +1158,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "DB24",
             "qty": 0,
-            "code": "A2-07-03",
+            "code": "A6-02-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1140,7 +1172,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "DB24",
             "qty": 0,
-            "code": "A2-07-04",
+            "code": "A6-02-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1154,7 +1186,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "DB24",
             "qty": 0,
-            "code": "A2-07-05",
+            "code": "A6-02-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1165,7 +1197,7 @@
             "categoryCn": "抽屉地柜",
             "cabinetModel": "DB30",
             "qty": 0,
-            "code": "A2-08-01",
+            "code": "A6-03-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1179,7 +1211,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "DB30",
             "qty": 0,
-            "code": "A2-08-02",
+            "code": "A6-03-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1193,7 +1225,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "DB30",
             "qty": 0,
-            "code": "A2-08-03",
+            "code": "A6-03-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1207,7 +1239,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "DB30",
             "qty": 0,
-            "code": "A2-08-04",
+            "code": "A6-03-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1221,10 +1253,33 @@
             "colorNameCn": "深灰",
             "cabinetModel": "DB30",
             "qty": 0,
-            "code": "A2-08-05",
+            "code": "A6-03-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
-          },
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "aisle",
+    "order": 2,
+    "aisleType": "forklift",
+    "nameCn": "叉车通道",
+    "nameEn": "Forklift Aisle"
+  },
+  {
+    "type": "zone",
+    "order": 3,
+    "nameCn": "B区",
+    "nameEn": "Zone B",
+    "racks": [
+      {
+        "rackName": "B1货架",
+        "rackNameEn": "Rack B1",
+        "columns": 5,
+        "levels": 3,
+        "locations": [
           {
             "model": "BOX-DB36",
             "type": "box",
@@ -1232,7 +1287,7 @@
             "categoryCn": "抽屉地柜",
             "cabinetModel": "DB36",
             "qty": 0,
-            "code": "A2-09-01",
+            "code": "B1-01-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1246,7 +1301,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "DB36",
             "qty": 0,
-            "code": "A2-09-02",
+            "code": "B1-01-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1260,7 +1315,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "DB36",
             "qty": 0,
-            "code": "A2-09-03",
+            "code": "B1-01-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1274,7 +1329,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "DB36",
             "qty": 0,
-            "code": "A2-09-04",
+            "code": "B1-01-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1288,7 +1343,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "DB36",
             "qty": 0,
-            "code": "A2-09-05",
+            "code": "B1-01-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1299,7 +1354,7 @@
             "categoryCn": "水槽柜",
             "cabinetModel": "SB30",
             "qty": 0,
-            "code": "A2-10-01",
+            "code": "B1-02-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1313,7 +1368,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "SB30",
             "qty": 0,
-            "code": "A2-10-02",
+            "code": "B1-02-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1327,7 +1382,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "SB30",
             "qty": 0,
-            "code": "A2-10-03",
+            "code": "B1-02-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1341,7 +1396,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "SB30",
             "qty": 0,
-            "code": "A2-10-04",
+            "code": "B1-02-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1355,18 +1410,10 @@
             "colorNameCn": "深灰",
             "cabinetModel": "SB30",
             "qty": 0,
-            "code": "A2-10-05",
+            "code": "B1-02-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
-          }
-        ]
-      },
-      {
-        "rackName": "A3货架",
-        "rackNameEn": "Rack A3",
-        "columns": 5,
-        "levels": 10,
-        "locations": [
+          },
           {
             "model": "BOX-SB33",
             "type": "box",
@@ -1374,7 +1421,7 @@
             "categoryCn": "水槽柜",
             "cabinetModel": "SB33",
             "qty": 0,
-            "code": "A3-01-01",
+            "code": "B1-03-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1388,7 +1435,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "SB33",
             "qty": 0,
-            "code": "A3-01-02",
+            "code": "B1-03-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1402,7 +1449,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "SB33",
             "qty": 0,
-            "code": "A3-01-03",
+            "code": "B1-03-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1416,7 +1463,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "SB33",
             "qty": 0,
-            "code": "A3-01-04",
+            "code": "B1-03-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1430,10 +1477,18 @@
             "colorNameCn": "深灰",
             "cabinetModel": "SB33",
             "qty": 0,
-            "code": "A3-01-05",
+            "code": "B1-03-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
-          },
+          }
+        ]
+      },
+      {
+        "rackName": "B2货架",
+        "rackNameEn": "Rack B2",
+        "columns": 5,
+        "levels": 3,
+        "locations": [
           {
             "model": "BOX-SB36",
             "type": "box",
@@ -1441,7 +1496,7 @@
             "categoryCn": "水槽柜",
             "cabinetModel": "SB36",
             "qty": 0,
-            "code": "A3-02-01",
+            "code": "B2-01-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1455,7 +1510,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "SB36",
             "qty": 0,
-            "code": "A3-02-02",
+            "code": "B2-01-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1469,7 +1524,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "SB36",
             "qty": 0,
-            "code": "A3-02-03",
+            "code": "B2-01-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1483,7 +1538,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "SB36",
             "qty": 0,
-            "code": "A3-02-04",
+            "code": "B2-01-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1497,7 +1552,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "SB36",
             "qty": 0,
-            "code": "A3-02-05",
+            "code": "B2-01-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1508,7 +1563,7 @@
             "categoryCn": "水槽柜",
             "cabinetModel": "SB42",
             "qty": 0,
-            "code": "A3-03-01",
+            "code": "B2-02-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1522,7 +1577,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "SB42",
             "qty": 0,
-            "code": "A3-03-02",
+            "code": "B2-02-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1536,7 +1591,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "SB42",
             "qty": 0,
-            "code": "A3-03-03",
+            "code": "B2-02-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1550,7 +1605,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "SB42",
             "qty": 0,
-            "code": "A3-03-04",
+            "code": "B2-02-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1564,7 +1619,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "SB42",
             "qty": 0,
-            "code": "A3-03-05",
+            "code": "B2-02-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1575,7 +1630,7 @@
             "categoryCn": "转角地柜",
             "cabinetModel": "BBC36",
             "qty": 0,
-            "code": "A3-04-01",
+            "code": "B2-03-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1589,7 +1644,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "BBC36",
             "qty": 0,
-            "code": "A3-04-02",
+            "code": "B2-03-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1603,7 +1658,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "BBC36",
             "qty": 0,
-            "code": "A3-04-03",
+            "code": "B2-03-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1617,7 +1672,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "BBC36",
             "qty": 0,
-            "code": "A3-04-04",
+            "code": "B2-03-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1631,10 +1686,18 @@
             "colorNameCn": "深灰",
             "cabinetModel": "BBC36",
             "qty": 0,
-            "code": "A3-04-05",
+            "code": "B2-03-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
-          },
+          }
+        ]
+      },
+      {
+        "rackName": "B3货架",
+        "rackNameEn": "Rack B3",
+        "columns": 5,
+        "levels": 3,
+        "locations": [
           {
             "model": "BOX-LS36",
             "type": "box",
@@ -1642,7 +1705,7 @@
             "categoryCn": "转角地柜",
             "cabinetModel": "LS36",
             "qty": 0,
-            "code": "A3-05-01",
+            "code": "B3-01-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1656,7 +1719,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "LS36",
             "qty": 0,
-            "code": "A3-05-02",
+            "code": "B3-01-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1670,7 +1733,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "LS36",
             "qty": 0,
-            "code": "A3-05-03",
+            "code": "B3-01-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1684,7 +1747,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "LS36",
             "qty": 0,
-            "code": "A3-05-04",
+            "code": "B3-01-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1698,7 +1761,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "LS36",
             "qty": 0,
-            "code": "A3-05-05",
+            "code": "B3-01-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1709,7 +1772,7 @@
             "categoryCn": "转角地柜",
             "cabinetModel": "EZR36",
             "qty": 0,
-            "code": "A3-06-01",
+            "code": "B3-02-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1723,7 +1786,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "EZR36",
             "qty": 0,
-            "code": "A3-06-02",
+            "code": "B3-02-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1737,7 +1800,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "EZR36",
             "qty": 0,
-            "code": "A3-06-03",
+            "code": "B3-02-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1751,7 +1814,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "EZR36",
             "qty": 0,
-            "code": "A3-06-04",
+            "code": "B3-02-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1765,7 +1828,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "EZR36",
             "qty": 0,
-            "code": "A3-06-05",
+            "code": "B3-02-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1776,7 +1839,7 @@
             "categoryCn": "吊柜",
             "cabinetModel": "W0930",
             "qty": 0,
-            "code": "A3-07-01",
+            "code": "B3-03-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1790,7 +1853,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "W0930",
             "qty": 0,
-            "code": "A3-07-02",
+            "code": "B3-03-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1804,7 +1867,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "W0930",
             "qty": 0,
-            "code": "A3-07-03",
+            "code": "B3-03-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1818,7 +1881,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "W0930",
             "qty": 0,
-            "code": "A3-07-04",
+            "code": "B3-03-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1832,10 +1895,18 @@
             "colorNameCn": "深灰",
             "cabinetModel": "W0930",
             "qty": 0,
-            "code": "A3-07-05",
+            "code": "B3-03-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
-          },
+          }
+        ]
+      },
+      {
+        "rackName": "B4货架",
+        "rackNameEn": "Rack B4",
+        "columns": 5,
+        "levels": 3,
+        "locations": [
           {
             "model": "BOX-W1230",
             "type": "box",
@@ -1843,7 +1914,7 @@
             "categoryCn": "吊柜",
             "cabinetModel": "W1230",
             "qty": 0,
-            "code": "A3-08-01",
+            "code": "B4-01-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1857,7 +1928,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "W1230",
             "qty": 0,
-            "code": "A3-08-02",
+            "code": "B4-01-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1871,7 +1942,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "W1230",
             "qty": 0,
-            "code": "A3-08-03",
+            "code": "B4-01-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1885,7 +1956,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "W1230",
             "qty": 0,
-            "code": "A3-08-04",
+            "code": "B4-01-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1899,7 +1970,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "W1230",
             "qty": 0,
-            "code": "A3-08-05",
+            "code": "B4-01-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1910,7 +1981,7 @@
             "categoryCn": "吊柜",
             "cabinetModel": "W1530",
             "qty": 0,
-            "code": "A3-09-01",
+            "code": "B4-02-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1924,7 +1995,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "W1530",
             "qty": 0,
-            "code": "A3-09-02",
+            "code": "B4-02-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1938,7 +2009,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "W1530",
             "qty": 0,
-            "code": "A3-09-03",
+            "code": "B4-02-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1952,7 +2023,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "W1530",
             "qty": 0,
-            "code": "A3-09-04",
+            "code": "B4-02-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1966,7 +2037,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "W1530",
             "qty": 0,
-            "code": "A3-09-05",
+            "code": "B4-02-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1977,7 +2048,7 @@
             "categoryCn": "吊柜",
             "cabinetModel": "W1830",
             "qty": 0,
-            "code": "A3-10-01",
+            "code": "B4-03-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -1991,7 +2062,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "W1830",
             "qty": 0,
-            "code": "A3-10-02",
+            "code": "B4-03-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2005,7 +2076,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "W1830",
             "qty": 0,
-            "code": "A3-10-03",
+            "code": "B4-03-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2019,7 +2090,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "W1830",
             "qty": 0,
-            "code": "A3-10-04",
+            "code": "B4-03-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2033,17 +2104,17 @@
             "colorNameCn": "深灰",
             "cabinetModel": "W1830",
             "qty": 0,
-            "code": "A3-10-05",
+            "code": "B4-03-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           }
         ]
       },
       {
-        "rackName": "A4货架",
-        "rackNameEn": "Rack A4",
+        "rackName": "B5货架",
+        "rackNameEn": "Rack B5",
         "columns": 5,
-        "levels": 10,
+        "levels": 3,
         "locations": [
           {
             "model": "BOX-W2130",
@@ -2052,7 +2123,7 @@
             "categoryCn": "吊柜",
             "cabinetModel": "W2130",
             "qty": 0,
-            "code": "A4-01-01",
+            "code": "B5-01-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2066,7 +2137,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "W2130",
             "qty": 0,
-            "code": "A4-01-02",
+            "code": "B5-01-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2080,7 +2151,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "W2130",
             "qty": 0,
-            "code": "A4-01-03",
+            "code": "B5-01-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2094,7 +2165,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "W2130",
             "qty": 0,
-            "code": "A4-01-04",
+            "code": "B5-01-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2108,7 +2179,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "W2130",
             "qty": 0,
-            "code": "A4-01-05",
+            "code": "B5-01-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2119,7 +2190,7 @@
             "categoryCn": "吊柜",
             "cabinetModel": "W2430",
             "qty": 0,
-            "code": "A4-02-01",
+            "code": "B5-02-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2133,7 +2204,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "W2430",
             "qty": 0,
-            "code": "A4-02-02",
+            "code": "B5-02-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2147,7 +2218,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "W2430",
             "qty": 0,
-            "code": "A4-02-03",
+            "code": "B5-02-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2161,7 +2232,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "W2430",
             "qty": 0,
-            "code": "A4-02-04",
+            "code": "B5-02-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2175,7 +2246,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "W2430",
             "qty": 0,
-            "code": "A4-02-05",
+            "code": "B5-02-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2186,7 +2257,7 @@
             "categoryCn": "吊柜",
             "cabinetModel": "W2730",
             "qty": 0,
-            "code": "A4-03-01",
+            "code": "B5-03-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2200,7 +2271,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "W2730",
             "qty": 0,
-            "code": "A4-03-02",
+            "code": "B5-03-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2214,7 +2285,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "W2730",
             "qty": 0,
-            "code": "A4-03-03",
+            "code": "B5-03-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2228,7 +2299,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "W2730",
             "qty": 0,
-            "code": "A4-03-04",
+            "code": "B5-03-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2242,10 +2313,18 @@
             "colorNameCn": "深灰",
             "cabinetModel": "W2730",
             "qty": 0,
-            "code": "A4-03-05",
+            "code": "B5-03-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
-          },
+          }
+        ]
+      },
+      {
+        "rackName": "B6货架",
+        "rackNameEn": "Rack B6",
+        "columns": 5,
+        "levels": 3,
+        "locations": [
           {
             "model": "BOX-W3030",
             "type": "box",
@@ -2253,7 +2332,7 @@
             "categoryCn": "吊柜",
             "cabinetModel": "W3030",
             "qty": 0,
-            "code": "A4-04-01",
+            "code": "B6-01-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2267,7 +2346,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "W3030",
             "qty": 0,
-            "code": "A4-04-02",
+            "code": "B6-01-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2281,7 +2360,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "W3030",
             "qty": 0,
-            "code": "A4-04-03",
+            "code": "B6-01-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2295,7 +2374,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "W3030",
             "qty": 0,
-            "code": "A4-04-04",
+            "code": "B6-01-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2309,7 +2388,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "W3030",
             "qty": 0,
-            "code": "A4-04-05",
+            "code": "B6-01-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2320,7 +2399,7 @@
             "categoryCn": "吊柜",
             "cabinetModel": "W3330",
             "qty": 0,
-            "code": "A4-05-01",
+            "code": "B6-02-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2334,7 +2413,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "W3330",
             "qty": 0,
-            "code": "A4-05-02",
+            "code": "B6-02-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2348,7 +2427,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "W3330",
             "qty": 0,
-            "code": "A4-05-03",
+            "code": "B6-02-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2362,7 +2441,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "W3330",
             "qty": 0,
-            "code": "A4-05-04",
+            "code": "B6-02-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2376,7 +2455,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "W3330",
             "qty": 0,
-            "code": "A4-05-05",
+            "code": "B6-02-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2387,7 +2466,7 @@
             "categoryCn": "吊柜",
             "cabinetModel": "W3630",
             "qty": 0,
-            "code": "A4-06-01",
+            "code": "B6-03-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2401,7 +2480,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "W3630",
             "qty": 0,
-            "code": "A4-06-02",
+            "code": "B6-03-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2415,7 +2494,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "W3630",
             "qty": 0,
-            "code": "A4-06-03",
+            "code": "B6-03-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2429,7 +2508,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "W3630",
             "qty": 0,
-            "code": "A4-06-04",
+            "code": "B6-03-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2443,10 +2522,33 @@
             "colorNameCn": "深灰",
             "cabinetModel": "W3630",
             "qty": 0,
-            "code": "A4-06-05",
+            "code": "B6-03-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
-          },
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "aisle",
+    "order": 4,
+    "aisleType": "forklift",
+    "nameCn": "叉车通道",
+    "nameEn": "Forklift Aisle"
+  },
+  {
+    "type": "zone",
+    "order": 5,
+    "nameCn": "C区",
+    "nameEn": "Zone C",
+    "racks": [
+      {
+        "rackName": "C1货架",
+        "rackNameEn": "Rack C1",
+        "columns": 5,
+        "levels": 3,
+        "locations": [
           {
             "model": "BOX-W0936",
             "type": "box",
@@ -2454,7 +2556,7 @@
             "categoryCn": "吊柜",
             "cabinetModel": "W0936",
             "qty": 0,
-            "code": "A4-07-01",
+            "code": "C1-01-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2468,7 +2570,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "W0936",
             "qty": 0,
-            "code": "A4-07-02",
+            "code": "C1-01-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2482,7 +2584,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "W0936",
             "qty": 0,
-            "code": "A4-07-03",
+            "code": "C1-01-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2496,7 +2598,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "W0936",
             "qty": 0,
-            "code": "A4-07-04",
+            "code": "C1-01-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2510,7 +2612,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "W0936",
             "qty": 0,
-            "code": "A4-07-05",
+            "code": "C1-01-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2521,7 +2623,7 @@
             "categoryCn": "吊柜",
             "cabinetModel": "W1236",
             "qty": 0,
-            "code": "A4-08-01",
+            "code": "C1-02-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2535,7 +2637,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "W1236",
             "qty": 0,
-            "code": "A4-08-02",
+            "code": "C1-02-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2549,7 +2651,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "W1236",
             "qty": 0,
-            "code": "A4-08-03",
+            "code": "C1-02-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2563,7 +2665,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "W1236",
             "qty": 0,
-            "code": "A4-08-04",
+            "code": "C1-02-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2577,7 +2679,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "W1236",
             "qty": 0,
-            "code": "A4-08-05",
+            "code": "C1-02-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2588,7 +2690,7 @@
             "categoryCn": "吊柜",
             "cabinetModel": "W1536",
             "qty": 0,
-            "code": "A4-09-01",
+            "code": "C1-03-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2602,7 +2704,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "W1536",
             "qty": 0,
-            "code": "A4-09-02",
+            "code": "C1-03-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2616,7 +2718,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "W1536",
             "qty": 0,
-            "code": "A4-09-03",
+            "code": "C1-03-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2630,7 +2732,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "W1536",
             "qty": 0,
-            "code": "A4-09-04",
+            "code": "C1-03-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2644,10 +2746,18 @@
             "colorNameCn": "深灰",
             "cabinetModel": "W1536",
             "qty": 0,
-            "code": "A4-09-05",
+            "code": "C1-03-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
-          },
+          }
+        ]
+      },
+      {
+        "rackName": "C2货架",
+        "rackNameEn": "Rack C2",
+        "columns": 5,
+        "levels": 3,
+        "locations": [
           {
             "model": "BOX-W1836",
             "type": "box",
@@ -2655,7 +2765,7 @@
             "categoryCn": "吊柜",
             "cabinetModel": "W1836",
             "qty": 0,
-            "code": "A4-10-01",
+            "code": "C2-01-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2669,7 +2779,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "W1836",
             "qty": 0,
-            "code": "A4-10-02",
+            "code": "C2-01-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2683,7 +2793,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "W1836",
             "qty": 0,
-            "code": "A4-10-03",
+            "code": "C2-01-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2697,7 +2807,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "W1836",
             "qty": 0,
-            "code": "A4-10-04",
+            "code": "C2-01-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2711,33 +2821,10 @@
             "colorNameCn": "深灰",
             "cabinetModel": "W1836",
             "qty": 0,
-            "code": "A4-10-05",
+            "code": "C2-01-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "type": "aisle",
-    "order": 2,
-    "nameCn": "主走廊",
-    "nameEn": "Main Aisle",
-    "aisleType": "main"
-  },
-  {
-    "type": "zone",
-    "order": 3,
-    "nameCn": "B区",
-    "nameEn": "Zone B",
-    "racks": [
-      {
-        "rackName": "B1货架",
-        "rackNameEn": "Rack B1",
-        "columns": 5,
-        "levels": 10,
-        "locations": [
+          },
           {
             "model": "BOX-W2136",
             "type": "box",
@@ -2745,7 +2832,7 @@
             "categoryCn": "吊柜",
             "cabinetModel": "W2136",
             "qty": 0,
-            "code": "B1-01-01",
+            "code": "C2-02-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2759,7 +2846,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "W2136",
             "qty": 0,
-            "code": "B1-01-02",
+            "code": "C2-02-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2773,7 +2860,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "W2136",
             "qty": 0,
-            "code": "B1-01-03",
+            "code": "C2-02-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2787,7 +2874,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "W2136",
             "qty": 0,
-            "code": "B1-01-04",
+            "code": "C2-02-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2801,7 +2888,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "W2136",
             "qty": 0,
-            "code": "B1-01-05",
+            "code": "C2-02-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2812,7 +2899,7 @@
             "categoryCn": "吊柜",
             "cabinetModel": "W2436",
             "qty": 0,
-            "code": "B1-02-01",
+            "code": "C2-03-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2826,7 +2913,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "W2436",
             "qty": 0,
-            "code": "B1-02-02",
+            "code": "C2-03-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2840,7 +2927,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "W2436",
             "qty": 0,
-            "code": "B1-02-03",
+            "code": "C2-03-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2854,7 +2941,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "W2436",
             "qty": 0,
-            "code": "B1-02-04",
+            "code": "C2-03-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2868,10 +2955,18 @@
             "colorNameCn": "深灰",
             "cabinetModel": "W2436",
             "qty": 0,
-            "code": "B1-02-05",
+            "code": "C2-03-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
-          },
+          }
+        ]
+      },
+      {
+        "rackName": "C3货架",
+        "rackNameEn": "Rack C3",
+        "columns": 5,
+        "levels": 3,
+        "locations": [
           {
             "model": "BOX-W2736",
             "type": "box",
@@ -2879,7 +2974,7 @@
             "categoryCn": "吊柜",
             "cabinetModel": "W2736",
             "qty": 0,
-            "code": "B1-03-01",
+            "code": "C3-01-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2893,7 +2988,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "W2736",
             "qty": 0,
-            "code": "B1-03-02",
+            "code": "C3-01-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2907,7 +3002,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "W2736",
             "qty": 0,
-            "code": "B1-03-03",
+            "code": "C3-01-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2921,7 +3016,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "W2736",
             "qty": 0,
-            "code": "B1-03-04",
+            "code": "C3-01-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2935,7 +3030,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "W2736",
             "qty": 0,
-            "code": "B1-03-05",
+            "code": "C3-01-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2946,7 +3041,7 @@
             "categoryCn": "吊柜",
             "cabinetModel": "W3036",
             "qty": 0,
-            "code": "B1-04-01",
+            "code": "C3-02-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2960,7 +3055,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "W3036",
             "qty": 0,
-            "code": "B1-04-02",
+            "code": "C3-02-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2974,7 +3069,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "W3036",
             "qty": 0,
-            "code": "B1-04-03",
+            "code": "C3-02-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -2988,7 +3083,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "W3036",
             "qty": 0,
-            "code": "B1-04-04",
+            "code": "C3-02-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3002,7 +3097,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "W3036",
             "qty": 0,
-            "code": "B1-04-05",
+            "code": "C3-02-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3013,7 +3108,7 @@
             "categoryCn": "吊柜",
             "cabinetModel": "W3336",
             "qty": 0,
-            "code": "B1-05-01",
+            "code": "C3-03-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3027,7 +3122,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "W3336",
             "qty": 0,
-            "code": "B1-05-02",
+            "code": "C3-03-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3041,7 +3136,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "W3336",
             "qty": 0,
-            "code": "B1-05-03",
+            "code": "C3-03-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3055,7 +3150,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "W3336",
             "qty": 0,
-            "code": "B1-05-04",
+            "code": "C3-03-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3069,10 +3164,18 @@
             "colorNameCn": "深灰",
             "cabinetModel": "W3336",
             "qty": 0,
-            "code": "B1-05-05",
+            "code": "C3-03-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
-          },
+          }
+        ]
+      },
+      {
+        "rackName": "C4货架",
+        "rackNameEn": "Rack C4",
+        "columns": 5,
+        "levels": 3,
+        "locations": [
           {
             "model": "BOX-W3636",
             "type": "box",
@@ -3080,7 +3183,7 @@
             "categoryCn": "吊柜",
             "cabinetModel": "W3636",
             "qty": 0,
-            "code": "B1-06-01",
+            "code": "C4-01-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3094,7 +3197,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "W3636",
             "qty": 0,
-            "code": "B1-06-02",
+            "code": "C4-01-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3108,7 +3211,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "W3636",
             "qty": 0,
-            "code": "B1-06-03",
+            "code": "C4-01-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3122,7 +3225,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "W3636",
             "qty": 0,
-            "code": "B1-06-04",
+            "code": "C4-01-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3136,7 +3239,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "W3636",
             "qty": 0,
-            "code": "B1-06-05",
+            "code": "C4-01-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3147,7 +3250,7 @@
             "categoryCn": "吊柜",
             "cabinetModel": "W0942",
             "qty": 0,
-            "code": "B1-07-01",
+            "code": "C4-02-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3161,7 +3264,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "W0942",
             "qty": 0,
-            "code": "B1-07-02",
+            "code": "C4-02-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3175,7 +3278,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "W0942",
             "qty": 0,
-            "code": "B1-07-03",
+            "code": "C4-02-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3189,7 +3292,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "W0942",
             "qty": 0,
-            "code": "B1-07-04",
+            "code": "C4-02-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3203,7 +3306,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "W0942",
             "qty": 0,
-            "code": "B1-07-05",
+            "code": "C4-02-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3214,7 +3317,7 @@
             "categoryCn": "吊柜",
             "cabinetModel": "W1242",
             "qty": 0,
-            "code": "B1-08-01",
+            "code": "C4-03-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3228,7 +3331,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "W1242",
             "qty": 0,
-            "code": "B1-08-02",
+            "code": "C4-03-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3242,7 +3345,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "W1242",
             "qty": 0,
-            "code": "B1-08-03",
+            "code": "C4-03-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3256,7 +3359,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "W1242",
             "qty": 0,
-            "code": "B1-08-04",
+            "code": "C4-03-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3270,10 +3373,18 @@
             "colorNameCn": "深灰",
             "cabinetModel": "W1242",
             "qty": 0,
-            "code": "B1-08-05",
+            "code": "C4-03-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
-          },
+          }
+        ]
+      },
+      {
+        "rackName": "C5货架",
+        "rackNameEn": "Rack C5",
+        "columns": 5,
+        "levels": 3,
+        "locations": [
           {
             "model": "BOX-W1542",
             "type": "box",
@@ -3281,7 +3392,7 @@
             "categoryCn": "吊柜",
             "cabinetModel": "W1542",
             "qty": 0,
-            "code": "B1-09-01",
+            "code": "C5-01-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3295,7 +3406,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "W1542",
             "qty": 0,
-            "code": "B1-09-02",
+            "code": "C5-01-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3309,7 +3420,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "W1542",
             "qty": 0,
-            "code": "B1-09-03",
+            "code": "C5-01-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3323,7 +3434,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "W1542",
             "qty": 0,
-            "code": "B1-09-04",
+            "code": "C5-01-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3337,7 +3448,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "W1542",
             "qty": 0,
-            "code": "B1-09-05",
+            "code": "C5-01-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3348,7 +3459,7 @@
             "categoryCn": "吊柜",
             "cabinetModel": "W1842",
             "qty": 0,
-            "code": "B1-10-01",
+            "code": "C5-02-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3362,7 +3473,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "W1842",
             "qty": 0,
-            "code": "B1-10-02",
+            "code": "C5-02-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3376,7 +3487,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "W1842",
             "qty": 0,
-            "code": "B1-10-03",
+            "code": "C5-02-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3390,7 +3501,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "W1842",
             "qty": 0,
-            "code": "B1-10-04",
+            "code": "C5-02-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3404,18 +3515,10 @@
             "colorNameCn": "深灰",
             "cabinetModel": "W1842",
             "qty": 0,
-            "code": "B1-10-05",
+            "code": "C5-02-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
-          }
-        ]
-      },
-      {
-        "rackName": "B2货架",
-        "rackNameEn": "Rack B2",
-        "columns": 5,
-        "levels": 10,
-        "locations": [
+          },
           {
             "model": "BOX-W2142",
             "type": "box",
@@ -3423,7 +3526,7 @@
             "categoryCn": "吊柜",
             "cabinetModel": "W2142",
             "qty": 0,
-            "code": "B2-01-01",
+            "code": "C5-03-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3437,7 +3540,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "W2142",
             "qty": 0,
-            "code": "B2-01-02",
+            "code": "C5-03-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3451,7 +3554,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "W2142",
             "qty": 0,
-            "code": "B2-01-03",
+            "code": "C5-03-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3465,7 +3568,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "W2142",
             "qty": 0,
-            "code": "B2-01-04",
+            "code": "C5-03-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3479,10 +3582,18 @@
             "colorNameCn": "深灰",
             "cabinetModel": "W2142",
             "qty": 0,
-            "code": "B2-01-05",
+            "code": "C5-03-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
-          },
+          }
+        ]
+      },
+      {
+        "rackName": "C6货架",
+        "rackNameEn": "Rack C6",
+        "columns": 5,
+        "levels": 3,
+        "locations": [
           {
             "model": "BOX-W2442",
             "type": "box",
@@ -3490,7 +3601,7 @@
             "categoryCn": "吊柜",
             "cabinetModel": "W2442",
             "qty": 0,
-            "code": "B2-02-01",
+            "code": "C6-01-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3504,7 +3615,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "W2442",
             "qty": 0,
-            "code": "B2-02-02",
+            "code": "C6-01-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3518,7 +3629,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "W2442",
             "qty": 0,
-            "code": "B2-02-03",
+            "code": "C6-01-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3532,7 +3643,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "W2442",
             "qty": 0,
-            "code": "B2-02-04",
+            "code": "C6-01-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3546,7 +3657,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "W2442",
             "qty": 0,
-            "code": "B2-02-05",
+            "code": "C6-01-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3557,7 +3668,7 @@
             "categoryCn": "吊柜",
             "cabinetModel": "W2742",
             "qty": 0,
-            "code": "B2-03-01",
+            "code": "C6-02-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3571,7 +3682,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "W2742",
             "qty": 0,
-            "code": "B2-03-02",
+            "code": "C6-02-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3585,7 +3696,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "W2742",
             "qty": 0,
-            "code": "B2-03-03",
+            "code": "C6-02-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3599,7 +3710,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "W2742",
             "qty": 0,
-            "code": "B2-03-04",
+            "code": "C6-02-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3613,7 +3724,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "W2742",
             "qty": 0,
-            "code": "B2-03-05",
+            "code": "C6-02-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3624,7 +3735,7 @@
             "categoryCn": "吊柜",
             "cabinetModel": "W3042",
             "qty": 0,
-            "code": "B2-04-01",
+            "code": "C6-03-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3638,7 +3749,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "W3042",
             "qty": 0,
-            "code": "B2-04-02",
+            "code": "C6-03-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3652,7 +3763,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "W3042",
             "qty": 0,
-            "code": "B2-04-03",
+            "code": "C6-03-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3666,7 +3777,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "W3042",
             "qty": 0,
-            "code": "B2-04-04",
+            "code": "C6-03-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3680,10 +3791,33 @@
             "colorNameCn": "深灰",
             "cabinetModel": "W3042",
             "qty": 0,
-            "code": "B2-04-05",
+            "code": "C6-03-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
-          },
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "aisle",
+    "order": 6,
+    "aisleType": "main",
+    "nameCn": "主走廊",
+    "nameEn": "Main Aisle"
+  },
+  {
+    "type": "zone",
+    "order": 7,
+    "nameCn": "D区",
+    "nameEn": "Zone D",
+    "racks": [
+      {
+        "rackName": "D1货架",
+        "rackNameEn": "Rack D1",
+        "columns": 5,
+        "levels": 3,
+        "locations": [
           {
             "model": "BOX-W3342",
             "type": "box",
@@ -3691,7 +3825,7 @@
             "categoryCn": "吊柜",
             "cabinetModel": "W3342",
             "qty": 0,
-            "code": "B2-05-01",
+            "code": "D1-01-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3705,7 +3839,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "W3342",
             "qty": 0,
-            "code": "B2-05-02",
+            "code": "D1-01-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3719,7 +3853,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "W3342",
             "qty": 0,
-            "code": "B2-05-03",
+            "code": "D1-01-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3733,7 +3867,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "W3342",
             "qty": 0,
-            "code": "B2-05-04",
+            "code": "D1-01-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3747,7 +3881,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "W3342",
             "qty": 0,
-            "code": "B2-05-05",
+            "code": "D1-01-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3758,7 +3892,7 @@
             "categoryCn": "吊柜",
             "cabinetModel": "W3642",
             "qty": 0,
-            "code": "B2-06-01",
+            "code": "D1-02-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3772,7 +3906,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "W3642",
             "qty": 0,
-            "code": "B2-06-02",
+            "code": "D1-02-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3786,7 +3920,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "W3642",
             "qty": 0,
-            "code": "B2-06-03",
+            "code": "D1-02-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3800,7 +3934,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "W3642",
             "qty": 0,
-            "code": "B2-06-04",
+            "code": "D1-02-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3814,7 +3948,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "W3642",
             "qty": 0,
-            "code": "B2-06-05",
+            "code": "D1-02-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3825,7 +3959,7 @@
             "categoryCn": "桥柜",
             "cabinetModel": "W3012",
             "qty": 0,
-            "code": "B2-07-01",
+            "code": "D1-03-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3839,7 +3973,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "W3012",
             "qty": 0,
-            "code": "B2-07-02",
+            "code": "D1-03-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3853,7 +3987,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "W3012",
             "qty": 0,
-            "code": "B2-07-03",
+            "code": "D1-03-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3867,7 +4001,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "W3012",
             "qty": 0,
-            "code": "B2-07-04",
+            "code": "D1-03-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3881,10 +4015,18 @@
             "colorNameCn": "深灰",
             "cabinetModel": "W3012",
             "qty": 0,
-            "code": "B2-07-05",
+            "code": "D1-03-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
-          },
+          }
+        ]
+      },
+      {
+        "rackName": "D2货架",
+        "rackNameEn": "Rack D2",
+        "columns": 5,
+        "levels": 3,
+        "locations": [
           {
             "model": "BOX-W3312",
             "type": "box",
@@ -3892,7 +4034,7 @@
             "categoryCn": "桥柜",
             "cabinetModel": "W3312",
             "qty": 0,
-            "code": "B2-08-01",
+            "code": "D2-01-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3906,7 +4048,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "W3312",
             "qty": 0,
-            "code": "B2-08-02",
+            "code": "D2-01-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3920,7 +4062,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "W3312",
             "qty": 0,
-            "code": "B2-08-03",
+            "code": "D2-01-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3934,7 +4076,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "W3312",
             "qty": 0,
-            "code": "B2-08-04",
+            "code": "D2-01-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3948,7 +4090,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "W3312",
             "qty": 0,
-            "code": "B2-08-05",
+            "code": "D2-01-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3959,7 +4101,7 @@
             "categoryCn": "桥柜",
             "cabinetModel": "W3612",
             "qty": 0,
-            "code": "B2-09-01",
+            "code": "D2-02-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3973,7 +4115,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "W3612",
             "qty": 0,
-            "code": "B2-09-02",
+            "code": "D2-02-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -3987,7 +4129,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "W3612",
             "qty": 0,
-            "code": "B2-09-03",
+            "code": "D2-02-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4001,7 +4143,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "W3612",
             "qty": 0,
-            "code": "B2-09-04",
+            "code": "D2-02-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4015,7 +4157,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "W3612",
             "qty": 0,
-            "code": "B2-09-05",
+            "code": "D2-02-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4026,7 +4168,7 @@
             "categoryCn": "桥柜",
             "cabinetModel": "W3015",
             "qty": 0,
-            "code": "B2-10-01",
+            "code": "D2-03-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4040,7 +4182,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "W3015",
             "qty": 0,
-            "code": "B2-10-02",
+            "code": "D2-03-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4054,7 +4196,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "W3015",
             "qty": 0,
-            "code": "B2-10-03",
+            "code": "D2-03-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4068,7 +4210,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "W3015",
             "qty": 0,
-            "code": "B2-10-04",
+            "code": "D2-03-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4082,17 +4224,17 @@
             "colorNameCn": "深灰",
             "cabinetModel": "W3015",
             "qty": 0,
-            "code": "B2-10-05",
+            "code": "D2-03-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           }
         ]
       },
       {
-        "rackName": "B3货架",
-        "rackNameEn": "Rack B3",
+        "rackName": "D3货架",
+        "rackNameEn": "Rack D3",
         "columns": 5,
-        "levels": 10,
+        "levels": 3,
         "locations": [
           {
             "model": "BOX-W3315",
@@ -4101,7 +4243,7 @@
             "categoryCn": "桥柜",
             "cabinetModel": "W3315",
             "qty": 0,
-            "code": "B3-01-01",
+            "code": "D3-01-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4115,7 +4257,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "W3315",
             "qty": 0,
-            "code": "B3-01-02",
+            "code": "D3-01-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4129,7 +4271,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "W3315",
             "qty": 0,
-            "code": "B3-01-03",
+            "code": "D3-01-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4143,7 +4285,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "W3315",
             "qty": 0,
-            "code": "B3-01-04",
+            "code": "D3-01-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4157,7 +4299,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "W3315",
             "qty": 0,
-            "code": "B3-01-05",
+            "code": "D3-01-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4168,7 +4310,7 @@
             "categoryCn": "桥柜",
             "cabinetModel": "W3615",
             "qty": 0,
-            "code": "B3-02-01",
+            "code": "D3-02-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4182,7 +4324,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "W3615",
             "qty": 0,
-            "code": "B3-02-02",
+            "code": "D3-02-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4196,7 +4338,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "W3615",
             "qty": 0,
-            "code": "B3-02-03",
+            "code": "D3-02-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4210,7 +4352,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "W3615",
             "qty": 0,
-            "code": "B3-02-04",
+            "code": "D3-02-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4224,7 +4366,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "W3615",
             "qty": 0,
-            "code": "B3-02-05",
+            "code": "D3-02-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4235,7 +4377,7 @@
             "categoryCn": "桥柜",
             "cabinetModel": "W3018",
             "qty": 0,
-            "code": "B3-03-01",
+            "code": "D3-03-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4249,7 +4391,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "W3018",
             "qty": 0,
-            "code": "B3-03-02",
+            "code": "D3-03-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4263,7 +4405,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "W3018",
             "qty": 0,
-            "code": "B3-03-03",
+            "code": "D3-03-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4277,7 +4419,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "W3018",
             "qty": 0,
-            "code": "B3-03-04",
+            "code": "D3-03-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4291,10 +4433,18 @@
             "colorNameCn": "深灰",
             "cabinetModel": "W3018",
             "qty": 0,
-            "code": "B3-03-05",
+            "code": "D3-03-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
-          },
+          }
+        ]
+      },
+      {
+        "rackName": "D4货架",
+        "rackNameEn": "Rack D4",
+        "columns": 5,
+        "levels": 3,
+        "locations": [
           {
             "model": "BOX-W3318",
             "type": "box",
@@ -4302,7 +4452,7 @@
             "categoryCn": "桥柜",
             "cabinetModel": "W3318",
             "qty": 0,
-            "code": "B3-04-01",
+            "code": "D4-01-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4316,7 +4466,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "W3318",
             "qty": 0,
-            "code": "B3-04-02",
+            "code": "D4-01-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4330,7 +4480,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "W3318",
             "qty": 0,
-            "code": "B3-04-03",
+            "code": "D4-01-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4344,7 +4494,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "W3318",
             "qty": 0,
-            "code": "B3-04-04",
+            "code": "D4-01-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4358,7 +4508,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "W3318",
             "qty": 0,
-            "code": "B3-04-05",
+            "code": "D4-01-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4369,7 +4519,7 @@
             "categoryCn": "桥柜",
             "cabinetModel": "W3618",
             "qty": 0,
-            "code": "B3-05-01",
+            "code": "D4-02-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4383,7 +4533,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "W3618",
             "qty": 0,
-            "code": "B3-05-02",
+            "code": "D4-02-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4397,7 +4547,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "W3618",
             "qty": 0,
-            "code": "B3-05-03",
+            "code": "D4-02-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4411,7 +4561,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "W3618",
             "qty": 0,
-            "code": "B3-05-04",
+            "code": "D4-02-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4425,7 +4575,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "W3618",
             "qty": 0,
-            "code": "B3-05-05",
+            "code": "D4-02-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4436,7 +4586,7 @@
             "categoryCn": "桥柜",
             "cabinetModel": "W3024",
             "qty": 0,
-            "code": "B3-06-01",
+            "code": "D4-03-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4450,7 +4600,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "W3024",
             "qty": 0,
-            "code": "B3-06-02",
+            "code": "D4-03-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4464,7 +4614,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "W3024",
             "qty": 0,
-            "code": "B3-06-03",
+            "code": "D4-03-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4478,7 +4628,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "W3024",
             "qty": 0,
-            "code": "B3-06-04",
+            "code": "D4-03-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4492,10 +4642,18 @@
             "colorNameCn": "深灰",
             "cabinetModel": "W3024",
             "qty": 0,
-            "code": "B3-06-05",
+            "code": "D4-03-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
-          },
+          }
+        ]
+      },
+      {
+        "rackName": "D5货架",
+        "rackNameEn": "Rack D5",
+        "columns": 5,
+        "levels": 3,
+        "locations": [
           {
             "model": "BOX-W3324",
             "type": "box",
@@ -4503,7 +4661,7 @@
             "categoryCn": "桥柜",
             "cabinetModel": "W3324",
             "qty": 0,
-            "code": "B3-07-01",
+            "code": "D5-01-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4517,7 +4675,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "W3324",
             "qty": 0,
-            "code": "B3-07-02",
+            "code": "D5-01-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4531,7 +4689,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "W3324",
             "qty": 0,
-            "code": "B3-07-03",
+            "code": "D5-01-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4545,7 +4703,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "W3324",
             "qty": 0,
-            "code": "B3-07-04",
+            "code": "D5-01-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4559,7 +4717,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "W3324",
             "qty": 0,
-            "code": "B3-07-05",
+            "code": "D5-01-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4570,7 +4728,7 @@
             "categoryCn": "桥柜",
             "cabinetModel": "W3624",
             "qty": 0,
-            "code": "B3-08-01",
+            "code": "D5-02-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4584,7 +4742,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "W3624",
             "qty": 0,
-            "code": "B3-08-02",
+            "code": "D5-02-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4598,7 +4756,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "W3624",
             "qty": 0,
-            "code": "B3-08-03",
+            "code": "D5-02-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4612,7 +4770,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "W3624",
             "qty": 0,
-            "code": "B3-08-04",
+            "code": "D5-02-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4626,7 +4784,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "W3624",
             "qty": 0,
-            "code": "B3-08-05",
+            "code": "D5-02-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4637,7 +4795,7 @@
             "categoryCn": "高柜",
             "cabinetModel": "P1884",
             "qty": 0,
-            "code": "B3-09-01",
+            "code": "D5-03-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4651,7 +4809,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "P1884",
             "qty": 0,
-            "code": "B3-09-02",
+            "code": "D5-03-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4665,7 +4823,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "P1884",
             "qty": 0,
-            "code": "B3-09-03",
+            "code": "D5-03-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4679,7 +4837,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "P1884",
             "qty": 0,
-            "code": "B3-09-04",
+            "code": "D5-03-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4693,10 +4851,18 @@
             "colorNameCn": "深灰",
             "cabinetModel": "P1884",
             "qty": 0,
-            "code": "B3-09-05",
+            "code": "D5-03-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
-          },
+          }
+        ]
+      },
+      {
+        "rackName": "D6货架",
+        "rackNameEn": "Rack D6",
+        "columns": 5,
+        "levels": 3,
+        "locations": [
           {
             "model": "BOX-P1890",
             "type": "box",
@@ -4704,7 +4870,7 @@
             "categoryCn": "高柜",
             "cabinetModel": "P1890",
             "qty": 0,
-            "code": "B3-10-01",
+            "code": "D6-01-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4718,7 +4884,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "P1890",
             "qty": 0,
-            "code": "B3-10-02",
+            "code": "D6-01-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4732,7 +4898,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "P1890",
             "qty": 0,
-            "code": "B3-10-03",
+            "code": "D6-01-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4746,7 +4912,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "P1890",
             "qty": 0,
-            "code": "B3-10-04",
+            "code": "D6-01-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4760,33 +4926,10 @@
             "colorNameCn": "深灰",
             "cabinetModel": "P1890",
             "qty": 0,
-            "code": "B3-10-05",
+            "code": "D6-01-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "type": "aisle",
-    "order": 4,
-    "nameCn": "叉车通道",
-    "nameEn": "Forklift Aisle",
-    "aisleType": "forklift"
-  },
-  {
-    "type": "zone",
-    "order": 5,
-    "nameCn": "C区",
-    "nameEn": "Zone C",
-    "racks": [
-      {
-        "rackName": "C1货架",
-        "rackNameEn": "Rack C1",
-        "columns": 5,
-        "levels": 10,
-        "locations": [
+          },
           {
             "model": "BOX-P1896",
             "type": "box",
@@ -4794,7 +4937,7 @@
             "categoryCn": "高柜",
             "cabinetModel": "P1896",
             "qty": 0,
-            "code": "C1-01-01",
+            "code": "D6-02-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4808,7 +4951,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "P1896",
             "qty": 0,
-            "code": "C1-01-02",
+            "code": "D6-02-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4822,7 +4965,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "P1896",
             "qty": 0,
-            "code": "C1-01-03",
+            "code": "D6-02-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4836,7 +4979,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "P1896",
             "qty": 0,
-            "code": "C1-01-04",
+            "code": "D6-02-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4850,7 +4993,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "P1896",
             "qty": 0,
-            "code": "C1-01-05",
+            "code": "D6-02-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4861,7 +5004,7 @@
             "categoryCn": "高柜",
             "cabinetModel": "P2484",
             "qty": 0,
-            "code": "C1-02-01",
+            "code": "D6-03-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4875,7 +5018,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "P2484",
             "qty": 0,
-            "code": "C1-02-02",
+            "code": "D6-03-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4889,7 +5032,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "P2484",
             "qty": 0,
-            "code": "C1-02-03",
+            "code": "D6-03-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4903,7 +5046,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "P2484",
             "qty": 0,
-            "code": "C1-02-04",
+            "code": "D6-03-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4917,10 +5060,33 @@
             "colorNameCn": "深灰",
             "cabinetModel": "P2484",
             "qty": 0,
-            "code": "C1-02-05",
+            "code": "D6-03-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
-          },
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "aisle",
+    "order": 8,
+    "aisleType": "forklift",
+    "nameCn": "叉车通道",
+    "nameEn": "Forklift Aisle"
+  },
+  {
+    "type": "zone",
+    "order": 9,
+    "nameCn": "E区",
+    "nameEn": "Zone E",
+    "racks": [
+      {
+        "rackName": "E1货架",
+        "rackNameEn": "Rack E1",
+        "columns": 5,
+        "levels": 3,
+        "locations": [
           {
             "model": "BOX-P2490",
             "type": "box",
@@ -4928,7 +5094,7 @@
             "categoryCn": "高柜",
             "cabinetModel": "P2490",
             "qty": 0,
-            "code": "C1-03-01",
+            "code": "E1-01-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4942,7 +5108,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "P2490",
             "qty": 0,
-            "code": "C1-03-02",
+            "code": "E1-01-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4956,7 +5122,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "P2490",
             "qty": 0,
-            "code": "C1-03-03",
+            "code": "E1-01-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4970,7 +5136,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "P2490",
             "qty": 0,
-            "code": "C1-03-04",
+            "code": "E1-01-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4984,7 +5150,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "P2490",
             "qty": 0,
-            "code": "C1-03-05",
+            "code": "E1-01-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -4995,7 +5161,7 @@
             "categoryCn": "高柜",
             "cabinetModel": "P2496",
             "qty": 0,
-            "code": "C1-04-01",
+            "code": "E1-02-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5009,7 +5175,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "P2496",
             "qty": 0,
-            "code": "C1-04-02",
+            "code": "E1-02-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5023,7 +5189,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "P2496",
             "qty": 0,
-            "code": "C1-04-03",
+            "code": "E1-02-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5037,7 +5203,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "P2496",
             "qty": 0,
-            "code": "C1-04-04",
+            "code": "E1-02-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5051,7 +5217,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "P2496",
             "qty": 0,
-            "code": "C1-04-05",
+            "code": "E1-02-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5062,7 +5228,7 @@
             "categoryCn": "高柜",
             "cabinetModel": "P3084",
             "qty": 0,
-            "code": "C1-05-01",
+            "code": "E1-03-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5076,7 +5242,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "P3084",
             "qty": 0,
-            "code": "C1-05-02",
+            "code": "E1-03-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5090,7 +5256,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "P3084",
             "qty": 0,
-            "code": "C1-05-03",
+            "code": "E1-03-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5104,7 +5270,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "P3084",
             "qty": 0,
-            "code": "C1-05-04",
+            "code": "E1-03-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5118,10 +5284,18 @@
             "colorNameCn": "深灰",
             "cabinetModel": "P3084",
             "qty": 0,
-            "code": "C1-05-05",
+            "code": "E1-03-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
-          },
+          }
+        ]
+      },
+      {
+        "rackName": "E2货架",
+        "rackNameEn": "Rack E2",
+        "columns": 5,
+        "levels": 3,
+        "locations": [
           {
             "model": "BOX-P3090",
             "type": "box",
@@ -5129,7 +5303,7 @@
             "categoryCn": "高柜",
             "cabinetModel": "P3090",
             "qty": 0,
-            "code": "C1-06-01",
+            "code": "E2-01-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5143,7 +5317,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "P3090",
             "qty": 0,
-            "code": "C1-06-02",
+            "code": "E2-01-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5157,7 +5331,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "P3090",
             "qty": 0,
-            "code": "C1-06-03",
+            "code": "E2-01-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5171,7 +5345,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "P3090",
             "qty": 0,
-            "code": "C1-06-04",
+            "code": "E2-01-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5185,7 +5359,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "P3090",
             "qty": 0,
-            "code": "C1-06-05",
+            "code": "E2-01-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5196,7 +5370,7 @@
             "categoryCn": "高柜",
             "cabinetModel": "P3096",
             "qty": 0,
-            "code": "C1-07-01",
+            "code": "E2-02-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5210,7 +5384,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "P3096",
             "qty": 0,
-            "code": "C1-07-02",
+            "code": "E2-02-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5224,7 +5398,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "P3096",
             "qty": 0,
-            "code": "C1-07-03",
+            "code": "E2-02-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5238,7 +5412,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "P3096",
             "qty": 0,
-            "code": "C1-07-04",
+            "code": "E2-02-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5252,7 +5426,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "P3096",
             "qty": 0,
-            "code": "C1-07-05",
+            "code": "E2-02-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5263,7 +5437,7 @@
             "categoryCn": "高柜",
             "cabinetModel": "P3684",
             "qty": 0,
-            "code": "C1-08-01",
+            "code": "E2-03-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5277,7 +5451,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "P3684",
             "qty": 0,
-            "code": "C1-08-02",
+            "code": "E2-03-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5291,7 +5465,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "P3684",
             "qty": 0,
-            "code": "C1-08-03",
+            "code": "E2-03-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5305,7 +5479,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "P3684",
             "qty": 0,
-            "code": "C1-08-04",
+            "code": "E2-03-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5319,10 +5493,18 @@
             "colorNameCn": "深灰",
             "cabinetModel": "P3684",
             "qty": 0,
-            "code": "C1-08-05",
+            "code": "E2-03-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
-          },
+          }
+        ]
+      },
+      {
+        "rackName": "E3货架",
+        "rackNameEn": "Rack E3",
+        "columns": 5,
+        "levels": 3,
+        "locations": [
           {
             "model": "BOX-P3690",
             "type": "box",
@@ -5330,7 +5512,7 @@
             "categoryCn": "高柜",
             "cabinetModel": "P3690",
             "qty": 0,
-            "code": "C1-09-01",
+            "code": "E3-01-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5344,7 +5526,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "P3690",
             "qty": 0,
-            "code": "C1-09-02",
+            "code": "E3-01-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5358,7 +5540,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "P3690",
             "qty": 0,
-            "code": "C1-09-03",
+            "code": "E3-01-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5372,7 +5554,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "P3690",
             "qty": 0,
-            "code": "C1-09-04",
+            "code": "E3-01-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5386,7 +5568,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "P3690",
             "qty": 0,
-            "code": "C1-09-05",
+            "code": "E3-01-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5397,7 +5579,7 @@
             "categoryCn": "高柜",
             "cabinetModel": "P3696",
             "qty": 0,
-            "code": "C1-10-01",
+            "code": "E3-02-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5411,7 +5593,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "P3696",
             "qty": 0,
-            "code": "C1-10-02",
+            "code": "E3-02-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5425,7 +5607,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "P3696",
             "qty": 0,
-            "code": "C1-10-03",
+            "code": "E3-02-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5439,7 +5621,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "P3696",
             "qty": 0,
-            "code": "C1-10-04",
+            "code": "E3-02-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5453,18 +5635,10 @@
             "colorNameCn": "深灰",
             "cabinetModel": "P3696",
             "qty": 0,
-            "code": "C1-10-05",
+            "code": "E3-02-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
-          }
-        ]
-      },
-      {
-        "rackName": "C2货架",
-        "rackNameEn": "Rack C2",
-        "columns": 5,
-        "levels": 10,
-        "locations": [
+          },
           {
             "model": "BOX-VB12",
             "type": "box",
@@ -5472,7 +5646,7 @@
             "categoryCn": "浴室柜",
             "cabinetModel": "VB12",
             "qty": 0,
-            "code": "C2-01-01",
+            "code": "E3-03-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5486,7 +5660,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "VB12",
             "qty": 0,
-            "code": "C2-01-02",
+            "code": "E3-03-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5500,7 +5674,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "VB12",
             "qty": 0,
-            "code": "C2-01-03",
+            "code": "E3-03-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5514,7 +5688,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "VB12",
             "qty": 0,
-            "code": "C2-01-04",
+            "code": "E3-03-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5528,10 +5702,18 @@
             "colorNameCn": "深灰",
             "cabinetModel": "VB12",
             "qty": 0,
-            "code": "C2-01-05",
+            "code": "E3-03-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
-          },
+          }
+        ]
+      },
+      {
+        "rackName": "E4货架",
+        "rackNameEn": "Rack E4",
+        "columns": 5,
+        "levels": 3,
+        "locations": [
           {
             "model": "BOX-VB15",
             "type": "box",
@@ -5539,7 +5721,7 @@
             "categoryCn": "浴室柜",
             "cabinetModel": "VB15",
             "qty": 0,
-            "code": "C2-02-01",
+            "code": "E4-01-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5553,7 +5735,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "VB15",
             "qty": 0,
-            "code": "C2-02-02",
+            "code": "E4-01-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5567,7 +5749,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "VB15",
             "qty": 0,
-            "code": "C2-02-03",
+            "code": "E4-01-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5581,7 +5763,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "VB15",
             "qty": 0,
-            "code": "C2-02-04",
+            "code": "E4-01-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5595,7 +5777,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "VB15",
             "qty": 0,
-            "code": "C2-02-05",
+            "code": "E4-01-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5606,7 +5788,7 @@
             "categoryCn": "浴室柜",
             "cabinetModel": "VB18",
             "qty": 0,
-            "code": "C2-03-01",
+            "code": "E4-02-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5620,7 +5802,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "VB18",
             "qty": 0,
-            "code": "C2-03-02",
+            "code": "E4-02-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5634,7 +5816,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "VB18",
             "qty": 0,
-            "code": "C2-03-03",
+            "code": "E4-02-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5648,7 +5830,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "VB18",
             "qty": 0,
-            "code": "C2-03-04",
+            "code": "E4-02-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5662,7 +5844,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "VB18",
             "qty": 0,
-            "code": "C2-03-05",
+            "code": "E4-02-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5673,7 +5855,7 @@
             "categoryCn": "浴室柜",
             "cabinetModel": "VB21",
             "qty": 0,
-            "code": "C2-04-01",
+            "code": "E4-03-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5687,7 +5869,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "VB21",
             "qty": 0,
-            "code": "C2-04-02",
+            "code": "E4-03-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5701,7 +5883,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "VB21",
             "qty": 0,
-            "code": "C2-04-03",
+            "code": "E4-03-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5715,7 +5897,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "VB21",
             "qty": 0,
-            "code": "C2-04-04",
+            "code": "E4-03-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5729,10 +5911,18 @@
             "colorNameCn": "深灰",
             "cabinetModel": "VB21",
             "qty": 0,
-            "code": "C2-04-05",
+            "code": "E4-03-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
-          },
+          }
+        ]
+      },
+      {
+        "rackName": "E5货架",
+        "rackNameEn": "Rack E5",
+        "columns": 5,
+        "levels": 3,
+        "locations": [
           {
             "model": "BOX-VB24",
             "type": "box",
@@ -5740,7 +5930,7 @@
             "categoryCn": "浴室柜",
             "cabinetModel": "VB24",
             "qty": 0,
-            "code": "C2-05-01",
+            "code": "E5-01-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5754,7 +5944,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "VB24",
             "qty": 0,
-            "code": "C2-05-02",
+            "code": "E5-01-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5768,7 +5958,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "VB24",
             "qty": 0,
-            "code": "C2-05-03",
+            "code": "E5-01-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5782,7 +5972,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "VB24",
             "qty": 0,
-            "code": "C2-05-04",
+            "code": "E5-01-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5796,7 +5986,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "VB24",
             "qty": 0,
-            "code": "C2-05-05",
+            "code": "E5-01-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5807,7 +5997,7 @@
             "categoryCn": "浴室柜",
             "cabinetModel": "VB30",
             "qty": 0,
-            "code": "C2-06-01",
+            "code": "E5-02-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5821,7 +6011,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "VB30",
             "qty": 0,
-            "code": "C2-06-02",
+            "code": "E5-02-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5835,7 +6025,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "VB30",
             "qty": 0,
-            "code": "C2-06-03",
+            "code": "E5-02-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5849,7 +6039,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "VB30",
             "qty": 0,
-            "code": "C2-06-04",
+            "code": "E5-02-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5863,7 +6053,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "VB30",
             "qty": 0,
-            "code": "C2-06-05",
+            "code": "E5-02-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5874,7 +6064,7 @@
             "categoryCn": "浴室柜",
             "cabinetModel": "VB36",
             "qty": 0,
-            "code": "C2-07-01",
+            "code": "E5-03-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5888,7 +6078,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "VB36",
             "qty": 0,
-            "code": "C2-07-02",
+            "code": "E5-03-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5902,7 +6092,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "VB36",
             "qty": 0,
-            "code": "C2-07-03",
+            "code": "E5-03-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5916,7 +6106,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "VB36",
             "qty": 0,
-            "code": "C2-07-04",
+            "code": "E5-03-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5930,10 +6120,18 @@
             "colorNameCn": "深灰",
             "cabinetModel": "VB36",
             "qty": 0,
-            "code": "C2-07-05",
+            "code": "E5-03-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
-          },
+          }
+        ]
+      },
+      {
+        "rackName": "E6货架",
+        "rackNameEn": "Rack E6",
+        "columns": 5,
+        "levels": 3,
+        "locations": [
           {
             "model": "BOX-VSB24",
             "type": "box",
@@ -5941,7 +6139,7 @@
             "categoryCn": "浴室柜",
             "cabinetModel": "VSB24",
             "qty": 0,
-            "code": "C2-08-01",
+            "code": "E6-01-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5955,7 +6153,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "VSB24",
             "qty": 0,
-            "code": "C2-08-02",
+            "code": "E6-01-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5969,7 +6167,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "VSB24",
             "qty": 0,
-            "code": "C2-08-03",
+            "code": "E6-01-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5983,7 +6181,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "VSB24",
             "qty": 0,
-            "code": "C2-08-04",
+            "code": "E6-01-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -5997,7 +6195,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "VSB24",
             "qty": 0,
-            "code": "C2-08-05",
+            "code": "E6-01-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -6008,7 +6206,7 @@
             "categoryCn": "浴室柜",
             "cabinetModel": "VSB30",
             "qty": 0,
-            "code": "C2-09-01",
+            "code": "E6-02-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -6022,7 +6220,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "VSB30",
             "qty": 0,
-            "code": "C2-09-02",
+            "code": "E6-02-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -6036,7 +6234,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "VSB30",
             "qty": 0,
-            "code": "C2-09-03",
+            "code": "E6-02-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -6050,7 +6248,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "VSB30",
             "qty": 0,
-            "code": "C2-09-04",
+            "code": "E6-02-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -6064,7 +6262,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "VSB30",
             "qty": 0,
-            "code": "C2-09-05",
+            "code": "E6-02-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -6075,7 +6273,7 @@
             "categoryCn": "浴室柜",
             "cabinetModel": "VSB36",
             "qty": 0,
-            "code": "C2-10-01",
+            "code": "E6-03-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -6089,7 +6287,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "VSB36",
             "qty": 0,
-            "code": "C2-10-02",
+            "code": "E6-03-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -6103,7 +6301,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "VSB36",
             "qty": 0,
-            "code": "C2-10-03",
+            "code": "E6-03-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -6117,7 +6315,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "VSB36",
             "qty": 0,
-            "code": "C2-10-04",
+            "code": "E6-03-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -6131,17 +6329,32 @@
             "colorNameCn": "深灰",
             "cabinetModel": "VSB36",
             "qty": 0,
-            "code": "C2-10-05",
+            "code": "E6-03-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           }
         ]
-      },
+      }
+    ]
+  },
+  {
+    "type": "aisle",
+    "order": 10,
+    "aisleType": "forklift",
+    "nameCn": "叉车通道",
+    "nameEn": "Forklift Aisle"
+  },
+  {
+    "type": "zone",
+    "order": 11,
+    "nameCn": "F区",
+    "nameEn": "Zone F",
+    "racks": [
       {
-        "rackName": "C3货架",
-        "rackNameEn": "Rack C3",
+        "rackName": "F1货架",
+        "rackNameEn": "Rack F1",
         "columns": 5,
-        "levels": 10,
+        "levels": 3,
         "locations": [
           {
             "model": "BOX-TK8",
@@ -6150,7 +6363,7 @@
             "categoryCn": "配件",
             "cabinetModel": "TK8",
             "qty": 0,
-            "code": "C3-01-01",
+            "code": "F1-01-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -6164,7 +6377,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "TK8",
             "qty": 0,
-            "code": "C3-01-02",
+            "code": "F1-01-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -6178,7 +6391,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "TK8",
             "qty": 0,
-            "code": "C3-01-03",
+            "code": "F1-01-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -6192,7 +6405,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "TK8",
             "qty": 0,
-            "code": "C3-01-04",
+            "code": "F1-01-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -6206,7 +6419,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "TK8",
             "qty": 0,
-            "code": "C3-01-05",
+            "code": "F1-01-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -6217,7 +6430,7 @@
             "categoryCn": "配件",
             "cabinetModel": "F330",
             "qty": 0,
-            "code": "C3-02-01",
+            "code": "F1-02-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -6231,7 +6444,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "F330",
             "qty": 0,
-            "code": "C3-02-02",
+            "code": "F1-02-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -6245,7 +6458,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "F330",
             "qty": 0,
-            "code": "C3-02-03",
+            "code": "F1-02-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -6259,7 +6472,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "F330",
             "qty": 0,
-            "code": "C3-02-04",
+            "code": "F1-02-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -6273,7 +6486,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "F330",
             "qty": 0,
-            "code": "C3-02-05",
+            "code": "F1-02-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -6284,7 +6497,7 @@
             "categoryCn": "配件",
             "cabinetModel": "F336",
             "qty": 0,
-            "code": "C3-03-01",
+            "code": "F1-03-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -6298,7 +6511,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "F336",
             "qty": 0,
-            "code": "C3-03-02",
+            "code": "F1-03-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -6312,7 +6525,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "F336",
             "qty": 0,
-            "code": "C3-03-03",
+            "code": "F1-03-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -6326,7 +6539,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "F336",
             "qty": 0,
-            "code": "C3-03-04",
+            "code": "F1-03-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -6340,10 +6553,18 @@
             "colorNameCn": "深灰",
             "cabinetModel": "F336",
             "qty": 0,
-            "code": "C3-03-05",
+            "code": "F1-03-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
-          },
+          }
+        ]
+      },
+      {
+        "rackName": "F2货架",
+        "rackNameEn": "Rack F2",
+        "columns": 5,
+        "levels": 3,
+        "locations": [
           {
             "model": "BOX-F342",
             "type": "box",
@@ -6351,7 +6572,7 @@
             "categoryCn": "配件",
             "cabinetModel": "F342",
             "qty": 0,
-            "code": "C3-04-01",
+            "code": "F2-01-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -6365,7 +6586,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "F342",
             "qty": 0,
-            "code": "C3-04-02",
+            "code": "F2-01-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -6379,7 +6600,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "F342",
             "qty": 0,
-            "code": "C3-04-03",
+            "code": "F2-01-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -6393,7 +6614,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "F342",
             "qty": 0,
-            "code": "C3-04-04",
+            "code": "F2-01-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -6407,7 +6628,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "F342",
             "qty": 0,
-            "code": "C3-04-05",
+            "code": "F2-01-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -6418,7 +6639,7 @@
             "categoryCn": "配件",
             "cabinetModel": "PNL2430",
             "qty": 0,
-            "code": "C3-05-01",
+            "code": "F2-02-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -6432,7 +6653,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "PNL2430",
             "qty": 0,
-            "code": "C3-05-02",
+            "code": "F2-02-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -6446,7 +6667,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "PNL2430",
             "qty": 0,
-            "code": "C3-05-03",
+            "code": "F2-02-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -6460,7 +6681,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "PNL2430",
             "qty": 0,
-            "code": "C3-05-04",
+            "code": "F2-02-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -6474,7 +6695,7 @@
             "colorNameCn": "深灰",
             "cabinetModel": "PNL2430",
             "qty": 0,
-            "code": "C3-05-05",
+            "code": "F2-02-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -6485,7 +6706,7 @@
             "categoryCn": "配件",
             "cabinetModel": "PNL2436",
             "qty": 0,
-            "code": "C3-06-01",
+            "code": "F2-03-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -6499,7 +6720,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "PNL2436",
             "qty": 0,
-            "code": "C3-06-02",
+            "code": "F2-03-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -6513,7 +6734,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "PNL2436",
             "qty": 0,
-            "code": "C3-06-03",
+            "code": "F2-03-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -6527,7 +6748,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "PNL2436",
             "qty": 0,
-            "code": "C3-06-04",
+            "code": "F2-03-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -6541,10 +6762,18 @@
             "colorNameCn": "深灰",
             "cabinetModel": "PNL2436",
             "qty": 0,
-            "code": "C3-06-05",
+            "code": "F2-03-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
-          },
+          }
+        ]
+      },
+      {
+        "rackName": "F3货架",
+        "rackNameEn": "Rack F3",
+        "columns": 5,
+        "levels": 3,
+        "locations": [
           {
             "model": "BOX-PNL2442",
             "type": "box",
@@ -6552,7 +6781,7 @@
             "categoryCn": "配件",
             "cabinetModel": "PNL2442",
             "qty": 0,
-            "code": "C3-07-01",
+            "code": "F3-01-01",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -6566,7 +6795,7 @@
             "colorNameCn": "白色",
             "cabinetModel": "PNL2442",
             "qty": 0,
-            "code": "C3-07-02",
+            "code": "F3-01-02",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -6580,7 +6809,7 @@
             "colorNameCn": "浅灰",
             "cabinetModel": "PNL2442",
             "qty": 0,
-            "code": "C3-07-03",
+            "code": "F3-01-03",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -6594,7 +6823,7 @@
             "colorNameCn": "灰色",
             "cabinetModel": "PNL2442",
             "qty": 0,
-            "code": "C3-07-04",
+            "code": "F3-01-04",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           },
@@ -6608,11 +6837,32 @@
             "colorNameCn": "深灰",
             "cabinetModel": "PNL2442",
             "qty": 0,
-            "code": "C3-07-05",
+            "code": "F3-01-05",
             "status": "occupied",
             "note": "系统自动分配 / Auto assigned"
           }
         ]
+      },
+      {
+        "rackName": "F4货架",
+        "rackNameEn": "Rack F4",
+        "columns": 5,
+        "levels": 3,
+        "locations": []
+      },
+      {
+        "rackName": "F5货架",
+        "rackNameEn": "Rack F5",
+        "columns": 5,
+        "levels": 3,
+        "locations": []
+      },
+      {
+        "rackName": "F6货架",
+        "rackNameEn": "Rack F6",
+        "columns": 5,
+        "levels": 3,
+        "locations": []
       }
     ]
   }

@@ -7,14 +7,12 @@ import {
   useSensors,
 } from '@dnd-kit/core';
 import { useMemo, useState } from 'react';
-import { AisleBand } from './WarehouseMap.jsx';
+import { AisleBand, buildWarehouseLayoutRows } from './WarehouseMap.jsx';
 import {
-  ForkliftAisle,
   buildLocations,
   getLocationGridPosition,
   getRackGridTemplateColumns,
 } from './Rack.jsx';
-import { MainAisle } from './Zone.jsx';
 import DraggableLocationCell from './DraggableLocationCell.jsx';
 import { useAdminDragMove } from '../hooks/useAdminDragMove.js';
 
@@ -22,6 +20,7 @@ function AdminDragWarehouse({ warehouseData }) {
   const [activeLocation, setActiveLocation] = useState(null);
   const [notice, setNotice] = useState('');
   const { error, moving, moveProduct, setError } = useAdminDragMove(warehouseData);
+  const layoutRows = buildWarehouseLayoutRows(warehouseData);
   const sensors = useSensors(
     useSensor(PointerSensor, {
       activationConstraint: { distance: 8 },
@@ -96,17 +95,17 @@ function AdminDragWarehouse({ warehouseData }) {
         onDragCancel={() => setActiveLocation(null)}
         onDragEnd={handleDragEnd}
       >
-        <div className="overflow-x-auto pb-2">
+        <div className="overflow-x-auto pb-2 [-webkit-overflow-scrolling:touch]">
           <div className="flex min-w-[760px] flex-col gap-4 sm:min-w-[920px]">
-            {warehouseData.map((item, index) => {
-            if (item.type === 'aisle') {
-              return (
-                <AisleBand
-                  key={item.id || `${item.nameEn}-${index}`}
-                  aisle={item}
-                />
-              );
-            }
+            {layoutRows.map((item, index) => {
+              if (item.type === 'aisle') {
+                return (
+                  <AisleBand
+                    key={`${item.nameEn}-${item.aisleType}-${index}`}
+                    aisle={item}
+                  />
+                );
+              }
 
               return (
                 <AdminDragZone
@@ -134,24 +133,24 @@ function AdminDragWarehouse({ warehouseData }) {
 
 function AdminDragZone({ activeCode, zone }) {
   const racks = zone.racks || [];
-  const mainAisleIndex = Math.ceil(racks.length / 2);
 
   return (
     <section className="rounded-md border border-cyan-200 bg-cyan-50/70 p-3">
       <div className="mb-3 flex items-center justify-between gap-3">
-        <h3 className="text-sm font-bold text-cyan-950">
+        <h3 className="text-base font-bold text-cyan-950">
           {zone.nameCn} / {zone.nameEn}
         </h3>
         <span className="text-xs font-medium text-cyan-800">
-          {zone.racks?.length || 0} 货架 / racks
+          {racks.length} 货架 / racks
         </span>
       </div>
-      <div className="grid grid-cols-1 gap-3 xl:grid-cols-2">
-        {racks.map((rack, index) => (
-          <div key={rack.rackName} className="contents">
-            <AdminDragRack activeCode={activeCode} rack={rack} />
-            {index + 1 === mainAisleIndex ? <MainAisle /> : null}
-          </div>
+      <div className="flex min-w-max gap-3">
+        {racks.map((rack) => (
+          <AdminDragRack
+            key={rack.rackName}
+            activeCode={activeCode}
+            rack={rack}
+          />
         ))}
       </div>
     </section>
@@ -162,13 +161,13 @@ function AdminDragRack({ activeCode, rack }) {
   const locations = buildLocations(rack);
 
   return (
-    <article className="rounded-md border border-slate-200 bg-white p-3">
+    <article className="min-w-[360px] rounded-md border border-slate-200 bg-white p-3">
       <div className="mb-3">
         <h4 className="text-sm font-bold text-slate-950">
           {rack.rackName} / {rack.rackNameEn}
         </h4>
         <p className="mt-1 text-xs text-slate-500">
-          {rack.columns} 列 / columns · {rack.levels} 层 / levels
+          {rack.columns} columns · Level 3 / Level 2 / Level 1
         </p>
       </div>
       <div
@@ -177,7 +176,6 @@ function AdminDragRack({ activeCode, rack }) {
           gridTemplateColumns: getRackGridTemplateColumns(rack),
         }}
       >
-        <ForkliftAisle rack={rack} />
         {locations.map((location, index) => (
           <div key={location.code} style={getLocationGridPosition(rack, index)}>
             <DraggableLocationCell activeCode={activeCode} location={location} />

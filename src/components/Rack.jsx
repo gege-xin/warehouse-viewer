@@ -34,53 +34,17 @@ export function buildLocations(rack) {
   return locations;
 }
 
-export function getForkliftAisleAfterColumn(rack) {
-  return Math.max(1, Math.floor(Number(rack.columns || 0) / 2));
-}
-
 export function getRackGridTemplateColumns(rack) {
-  const columns = Number(rack.columns || 0);
-  const leftColumns = getForkliftAisleAfterColumn(rack);
-  const rightColumns = Math.max(0, columns - leftColumns);
-
-  return [
-    `repeat(${leftColumns}, minmax(64px, 1fr))`,
-    'minmax(86px, 104px)',
-    rightColumns ? `repeat(${rightColumns}, minmax(64px, 1fr))` : '',
-  ]
-    .filter(Boolean)
-    .join(' ');
+  return `repeat(${Number(rack.columns || 0)}, minmax(64px, 1fr))`;
 }
 
 export function getLocationGridPosition(rack, index) {
   const columns = Math.max(1, Number(rack.columns || 0));
-  const originalColumn = (index % columns) + 1;
-  const row = Math.floor(index / columns) + 1;
-  const aisleAfterColumn = getForkliftAisleAfterColumn(rack);
-  const gridColumn =
-    originalColumn > aisleAfterColumn ? originalColumn + 1 : originalColumn;
 
   return {
-    gridColumn,
-    gridRow: row,
+    gridColumn: (index % columns) + 1,
+    gridRow: Math.floor(index / columns) + 1,
   };
-}
-
-export function ForkliftAisle({ rack }) {
-  return (
-    <div
-      className="flex min-h-[64px] items-center justify-center rounded-md border border-dashed border-slate-400 bg-slate-200 px-2 text-center text-[11px] font-bold text-slate-700 sm:min-h-[76px] sm:text-xs"
-      style={{
-        gridColumn: getForkliftAisleAfterColumn(rack) + 1,
-        gridRow: `1 / span ${Number(rack.levels || 1)}`,
-        writingMode: 'vertical-rl',
-        textOrientation: 'mixed',
-      }}
-      aria-label="叉车通道 / Forklift Aisle"
-    >
-      叉车通道 / Forklift Aisle
-    </div>
-  );
 }
 
 function Rack({
@@ -94,14 +58,20 @@ function Rack({
   const locations = buildLocations(rack);
 
   return (
-    <article className="rounded-md border border-slate-200 bg-white p-3">
+    <article className="min-w-[360px] rounded-md border border-slate-200 bg-white p-3">
       <div className="mb-3 flex items-center justify-between gap-2">
         <div>
-          <h4 className={largeText ? 'text-base font-extrabold text-slate-950' : 'text-sm font-bold text-slate-950'}>
+          <h4
+            className={
+              largeText
+                ? 'text-base font-extrabold text-slate-950'
+                : 'text-sm font-bold text-slate-950'
+            }
+          >
             {rack.rackName} / {rack.rackNameEn}
           </h4>
           <p className="mt-1 text-xs text-slate-500">
-            {rack.columns} 列 / columns · {rack.levels} 层 / levels
+            {rack.columns} columns · Level 3 / Level 2 / Level 1
           </p>
         </div>
       </div>
@@ -112,7 +82,6 @@ function Rack({
           gridTemplateColumns: getRackGridTemplateColumns(rack),
         }}
       >
-        <ForkliftAisle rack={rack} />
         {locations.map((location, index) => (
           <div key={location.code} style={getLocationGridPosition(rack, index)}>
             <LocationCell

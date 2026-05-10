@@ -23,14 +23,23 @@ const db = getFirestore();
 const seed = JSON.parse(await readFile('data/warehouse.json', 'utf8'));
 const collectionRef = db.collection('warehouseLocations');
 const batch = db.batch();
+const targetDocIds = new Set();
 
 seed.forEach((item, index) => {
   const docId = `${String(index + 1).padStart(2, '0')}-${slug(item.nameEn || item.nameCn || item.type)}`;
+  targetDocIds.add(docId);
   batch.set(collectionRef.doc(docId), {
     ...item,
     order: item.order ?? index + 1,
     updatedAt: new Date().toISOString(),
   });
+});
+
+const existingDocs = await collectionRef.listDocuments();
+existingDocs.forEach((docRef) => {
+  if (!targetDocIds.has(docRef.id)) {
+    batch.delete(docRef);
+  }
 });
 
 await batch.commit();

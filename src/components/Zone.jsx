@@ -1,6 +1,10 @@
+import { Fragment } from 'react';
 import Rack from './Rack.jsx';
 
 function Zone({ zone, searchTerm, onSelectLocation }) {
+  const racks = zone.racks || [];
+  const mainAisleIndex = Math.ceil(racks.length / 2);
+
   return (
     <section className="rounded-md border border-cyan-200 bg-cyan-50/70 p-3">
       <div className="mb-3 flex items-center justify-between gap-3">
@@ -13,24 +17,34 @@ function Zone({ zone, searchTerm, onSelectLocation }) {
       </div>
 
       <div className="grid grid-cols-1 gap-3 xl:grid-cols-2">
-        {(zone.racks || []).map((rack) => (
-          <Rack
-            key={rack.rackName}
-            rack={rack}
-            searchTerm={searchTerm}
-            onSelectLocation={(location) =>
-              onSelectLocation({
-                ...location,
-                zoneNameCn: zone.nameCn,
-                zoneNameEn: zone.nameEn,
-                rackName: rack.rackName,
-                rackNameEn: rack.rackNameEn,
-              })
-            }
-          />
+        {racks.map((rack, index) => (
+          <Fragment key={rack.rackName}>
+            <Rack
+              rack={rack}
+              searchTerm={searchTerm}
+              onSelectLocation={(location) =>
+                onSelectLocation({
+                  ...location,
+                  zoneNameCn: zone.nameCn,
+                  zoneNameEn: zone.nameEn,
+                  rackName: rack.rackName,
+                  rackNameEn: rack.rackNameEn,
+                })
+              }
+            />
+            {index + 1 === mainAisleIndex ? <MainAisle /> : null}
+          </Fragment>
         ))}
       </div>
     </section>
+  );
+}
+
+export function MainAisle() {
+  return (
+    <div className="flex min-h-16 items-center justify-center rounded-md border border-dashed border-slate-500 bg-slate-300 px-4 py-3 text-sm font-bold text-slate-800 xl:col-span-2">
+      主走廊 / Main Aisle
+    </div>
   );
 }
 

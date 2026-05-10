@@ -7,7 +7,14 @@ import {
   useSensors,
 } from '@dnd-kit/core';
 import { useMemo, useState } from 'react';
-import { buildLocations } from './Rack.jsx';
+import { AisleBand } from './WarehouseMap.jsx';
+import {
+  ForkliftAisle,
+  buildLocations,
+  getLocationGridPosition,
+  getRackGridTemplateColumns,
+} from './Rack.jsx';
+import { MainAisle } from './Zone.jsx';
 import DraggableLocationCell from './DraggableLocationCell.jsx';
 import { useAdminDragMove } from '../hooks/useAdminDragMove.js';
 
@@ -92,16 +99,14 @@ function AdminDragWarehouse({ warehouseData }) {
         <div className="overflow-x-auto pb-2">
           <div className="flex min-w-[760px] flex-col gap-4 sm:min-w-[920px]">
             {warehouseData.map((item, index) => {
-              if (item.type === 'aisle') {
-                return (
-                  <div
-                    key={item.id || `${item.nameEn}-${index}`}
-                    className="flex h-14 items-center justify-center rounded-md border border-dashed border-slate-400 bg-slate-200 text-sm font-semibold text-slate-700"
-                  >
-                    {item.nameCn} / {item.nameEn}
-                  </div>
-                );
-              }
+            if (item.type === 'aisle') {
+              return (
+                <AisleBand
+                  key={item.id || `${item.nameEn}-${index}`}
+                  aisle={item}
+                />
+              );
+            }
 
               return (
                 <AdminDragZone
@@ -128,6 +133,9 @@ function AdminDragWarehouse({ warehouseData }) {
 }
 
 function AdminDragZone({ activeCode, zone }) {
+  const racks = zone.racks || [];
+  const mainAisleIndex = Math.ceil(racks.length / 2);
+
   return (
     <section className="rounded-md border border-cyan-200 bg-cyan-50/70 p-3">
       <div className="mb-3 flex items-center justify-between gap-3">
@@ -139,12 +147,11 @@ function AdminDragZone({ activeCode, zone }) {
         </span>
       </div>
       <div className="grid grid-cols-1 gap-3 xl:grid-cols-2">
-        {(zone.racks || []).map((rack) => (
-          <AdminDragRack
-            key={rack.rackName}
-            activeCode={activeCode}
-            rack={rack}
-          />
+        {racks.map((rack, index) => (
+          <div key={rack.rackName} className="contents">
+            <AdminDragRack activeCode={activeCode} rack={rack} />
+            {index + 1 === mainAisleIndex ? <MainAisle /> : null}
+          </div>
         ))}
       </div>
     </section>
@@ -167,15 +174,14 @@ function AdminDragRack({ activeCode, rack }) {
       <div
         className="grid gap-1.5"
         style={{
-          gridTemplateColumns: `repeat(${rack.columns}, minmax(64px, 1fr))`,
+          gridTemplateColumns: getRackGridTemplateColumns(rack),
         }}
       >
-        {locations.map((location) => (
-          <DraggableLocationCell
-            key={location.code}
-            activeCode={activeCode}
-            location={location}
-          />
+        <ForkliftAisle rack={rack} />
+        {locations.map((location, index) => (
+          <div key={location.code} style={getLocationGridPosition(rack, index)}>
+            <DraggableLocationCell activeCode={activeCode} location={location} />
+          </div>
         ))}
       </div>
     </article>

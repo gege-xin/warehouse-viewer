@@ -34,6 +34,55 @@ export function buildLocations(rack) {
   return locations;
 }
 
+export function getForkliftAisleAfterColumn(rack) {
+  return Math.max(1, Math.floor(Number(rack.columns || 0) / 2));
+}
+
+export function getRackGridTemplateColumns(rack) {
+  const columns = Number(rack.columns || 0);
+  const leftColumns = getForkliftAisleAfterColumn(rack);
+  const rightColumns = Math.max(0, columns - leftColumns);
+
+  return [
+    `repeat(${leftColumns}, minmax(64px, 1fr))`,
+    'minmax(86px, 104px)',
+    rightColumns ? `repeat(${rightColumns}, minmax(64px, 1fr))` : '',
+  ]
+    .filter(Boolean)
+    .join(' ');
+}
+
+export function getLocationGridPosition(rack, index) {
+  const columns = Math.max(1, Number(rack.columns || 0));
+  const originalColumn = (index % columns) + 1;
+  const row = Math.floor(index / columns) + 1;
+  const aisleAfterColumn = getForkliftAisleAfterColumn(rack);
+  const gridColumn =
+    originalColumn > aisleAfterColumn ? originalColumn + 1 : originalColumn;
+
+  return {
+    gridColumn,
+    gridRow: row,
+  };
+}
+
+export function ForkliftAisle({ rack }) {
+  return (
+    <div
+      className="flex min-h-[64px] items-center justify-center rounded-md border border-dashed border-slate-400 bg-slate-200 px-2 text-center text-[11px] font-bold text-slate-700 sm:min-h-[76px] sm:text-xs"
+      style={{
+        gridColumn: getForkliftAisleAfterColumn(rack) + 1,
+        gridRow: `1 / span ${Number(rack.levels || 1)}`,
+        writingMode: 'vertical-rl',
+        textOrientation: 'mixed',
+      }}
+      aria-label="叉车通道 / Forklift Aisle"
+    >
+      叉车通道 / Forklift Aisle
+    </div>
+  );
+}
+
 function Rack({ rack, searchTerm, onSelectLocation }) {
   const locations = buildLocations(rack);
 
@@ -53,16 +102,18 @@ function Rack({ rack, searchTerm, onSelectLocation }) {
       <div
         className="grid gap-1.5"
         style={{
-          gridTemplateColumns: `repeat(${rack.columns}, minmax(64px, 1fr))`,
+          gridTemplateColumns: getRackGridTemplateColumns(rack),
         }}
       >
-        {locations.map((location) => (
-          <LocationCell
-            key={location.code}
-            location={location}
-            searchTerm={searchTerm}
-            onClick={() => onSelectLocation(location)}
-          />
+        <ForkliftAisle rack={rack} />
+        {locations.map((location, index) => (
+          <div key={location.code} style={getLocationGridPosition(rack, index)}>
+            <LocationCell
+              location={location}
+              searchTerm={searchTerm}
+              onClick={() => onSelectLocation(location)}
+            />
+          </div>
         ))}
       </div>
     </article>

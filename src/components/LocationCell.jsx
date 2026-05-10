@@ -97,7 +97,7 @@ function LocationCell({ location, searchTerm, onClick }) {
       data-search-match={matched ? 'true' : undefined}
       onClick={onClick}
       className={[
-        'flex min-h-[64px] flex-col justify-between rounded-md border p-2 text-left text-[11px] transition hover:-translate-y-0.5 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-cyan-500 sm:min-h-[76px] sm:text-xs',
+        'flex h-full min-h-[64px] flex-col justify-between rounded-md border p-2 text-left text-[11px] transition hover:-translate-y-0.5 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-cyan-500 sm:min-h-[76px] sm:text-xs',
         style,
         matched ? 'ring-4 ring-amber-400 ring-offset-2' : '',
       ].join(' ')}

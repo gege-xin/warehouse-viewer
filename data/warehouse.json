@@ -2723,7 +2723,8 @@
     "type": "aisle",
     "order": 2,
     "nameCn": "主走廊",
-    "nameEn": "Main Aisle"
+    "nameEn": "Main Aisle",
+    "aisleType": "main"
   },
   {
     "type": "zone",
@@ -4771,7 +4772,8 @@
     "type": "aisle",
     "order": 4,
     "nameCn": "叉车通道",
-    "nameEn": "Forklift Aisle"
+    "nameEn": "Forklift Aisle",
+    "aisleType": "forklift"
   },
   {
     "type": "zone",

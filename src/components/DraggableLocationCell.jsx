@@ -31,7 +31,7 @@ function DraggableLocationCell({ activeCode, location }) {
       ref={setNodeRef}
       type="button"
       className={[
-        'flex min-h-[64px] touch-manipulation flex-col justify-between rounded-md border p-2 text-left text-[11px] transition focus:outline-none focus:ring-2 focus:ring-cyan-500 sm:min-h-[76px] sm:text-xs',
+        'flex h-full min-h-[64px] touch-manipulation flex-col justify-between rounded-md border p-2 text-left text-[11px] transition focus:outline-none focus:ring-2 focus:ring-cyan-500 sm:min-h-[76px] sm:text-xs',
         style,
         hasProduct ? 'cursor-grab active:cursor-grabbing' : 'cursor-default',
         isDragging || isActive ? 'opacity-40 ring-4 ring-cyan-400 ring-offset-2' : '',

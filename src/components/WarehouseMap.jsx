@@ -31,12 +31,10 @@ function WarehouseMap({ data, searchTerm, onSelectLocation }) {
           {data.map((item, index) => {
             if (item.type === 'aisle') {
               return (
-                <div
+                <AisleBand
                   key={item.id || `${item.nameEn}-${index}`}
-                  className="flex h-14 items-center justify-center rounded-md border border-dashed border-slate-400 bg-slate-200 text-sm font-semibold text-slate-700"
-                >
-                  {item.nameCn} / {item.nameEn}
-                </div>
+                  aisle={item}
+                />
               );
             }
 
@@ -52,6 +50,22 @@ function WarehouseMap({ data, searchTerm, onSelectLocation }) {
         </div>
       </div>
     </section>
+  );
+}
+
+export function AisleBand({ aisle }) {
+  const isMain = aisle.aisleType === 'main' || aisle.nameEn === 'Main Aisle';
+  const className = isMain
+    ? 'h-20 border-slate-500 bg-slate-300 text-slate-800'
+    : 'h-16 border-slate-400 bg-slate-200 text-slate-700';
+
+  return (
+    <div
+      className={`flex items-center justify-center rounded-md border border-dashed px-4 text-sm font-bold ${className}`}
+      aria-label={`${aisle.nameCn} / ${aisle.nameEn}`}
+    >
+      {aisle.nameCn} / {aisle.nameEn}
+    </div>
   );
 }
 

@@ -70,6 +70,7 @@ const warehousePlan = [
     order: 2,
     nameCn: '主走廊',
     nameEn: 'Main Aisle',
+    aisleType: 'main',
   },
   {
     type: 'zone',
@@ -83,6 +84,7 @@ const warehousePlan = [
     order: 4,
     nameCn: '叉车通道',
     nameEn: 'Forklift Aisle',
+    aisleType: 'forklift',
   },
   {
     type: 'zone',

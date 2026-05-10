@@ -8,6 +8,9 @@ import Legend from './components/Legend.jsx';
 import LocationModal from './components/LocationModal.jsx';
 import Login from './components/Login.jsx';
 import AdminPanel from './components/AdminPanel.jsx';
+import LargeTextToggle from './components/LargeTextToggle.jsx';
+import LocateProduct from './components/LocateProduct.jsx';
+import OccupiedOnlyToggle from './components/OccupiedOnlyToggle.jsx';
 import { locationMatches } from './components/LocationCell.jsx';
 import { auth, hasFirebaseConfig, isAdminEmail } from './lib/firebase.js';
 import { subscribeWarehouseData } from './lib/warehouseService.js';
@@ -40,6 +43,37 @@ function countLocations(data) {
       unassigned: 0,
     },
   );
+}
+
+function getSearchResults(data, normalizedSearch) {
+  if (!normalizedSearch) return [];
+
+  return data.flatMap((item) => {
+    if (item.type !== 'zone') return [];
+
+    return (item.racks || []).flatMap((rack) =>
+      (rack.locations || [])
+        .filter((location) => locationMatches(location, normalizedSearch))
+        .map((location) => ({
+          ...location,
+          zoneNameCn: item.nameCn,
+          zoneNameEn: item.nameEn,
+          rackName: rack.rackName,
+          rackNameEn: rack.rackNameEn,
+        })),
+    );
+  });
+}
+
+function sortSearchResults(results) {
+  return [...results].sort((a, b) => {
+    const aUnassigned = a.status === 'unassigned' ? 0 : 1;
+    const bUnassigned = b.status === 'unassigned' ? 0 : 1;
+    return (
+      aUnassigned - bUnassigned ||
+      String(a.model || '').localeCompare(String(b.model || ''))
+    );
+  });
 }
 
 function App() {
@@ -105,32 +139,37 @@ function App() {
 function PublicWarehousePage({ currentUser, dataError, isAdmin, warehouseData }) {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedLocation, setSelectedLocation] = useState(null);
+  const [focusedCode, setFocusedCode] = useState('');
+  const [largeText, setLargeText] = useLocalStorageBoolean('largeTextMode', false);
+  const [occupiedOnly, setOccupiedOnly] = useLocalStorageBoolean(
+    'showOccupiedOnly',
+    false,
+  );
 
   const normalizedSearch = searchTerm.trim().toLowerCase();
   const summary = useMemo(() => countLocations(warehouseData), [warehouseData]);
+  const searchResults = useMemo(
+    () => sortSearchResults(getSearchResults(warehouseData, normalizedSearch)),
+    [normalizedSearch, warehouseData],
+  );
+  const matchCount = searchResults.length;
 
-  const matchCount = useMemo(() => {
-    if (!normalizedSearch) return 0;
+  useEffect(() => {
+    if (!normalizedSearch || searchResults.length === 0) {
+      setFocusedCode('');
+      return;
+    }
 
-    return warehouseData.reduce((count, item) => {
-      if (item.type !== 'zone') return count;
-
-      return (
-        count +
-        (item.racks || []).reduce((rackCount, rack) => {
-          return (
-            rackCount +
-            (rack.locations || []).filter((location) =>
-              locationMatches(location, normalizedSearch),
-            ).length
-          );
-        }, 0)
-      );
-    }, 0);
-  }, [normalizedSearch, warehouseData]);
+    setFocusedCode(searchResults[0].code);
+  }, [normalizedSearch, searchResults]);
 
   return (
-    <main className="min-h-screen bg-[#f5f7fb] text-slate-900">
+    <main
+      className={[
+        'min-h-screen bg-[#f5f7fb] text-slate-900',
+        largeText ? 'large-text-mode' : '',
+      ].join(' ')}
+    >
       <div className="sticky top-0 z-30 border-b border-slate-200 bg-white/95 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:px-8">
           <Link to="/" className="min-w-0">
@@ -175,14 +214,22 @@ function PublicWarehousePage({ currentUser, dataError, isAdmin, warehouseData })
 
         <div className="mx-auto max-w-7xl px-4 pb-3 sm:px-6 lg:px-8">
           <SearchBar
+            largeText={largeText}
             matchCount={matchCount}
             searchTerm={searchTerm}
             onSearchChange={setSearchTerm}
           />
+          <div className="mt-2 flex flex-col gap-2 sm:flex-row sm:flex-wrap">
+            <LargeTextToggle enabled={largeText} onChange={setLargeText} />
+            <OccupiedOnlyToggle
+              enabled={occupiedOnly}
+              onChange={setOccupiedOnly}
+            />
+          </div>
         </div>
       </div>
 
-      <div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex max-w-7xl flex-col gap-3 px-2 py-3 sm:gap-4 sm:px-6 sm:py-4 lg:px-8">
         {dataError ? (
           <div className="rounded-md border border-red-200 bg-red-50 p-3 text-sm font-medium text-red-700">
             Firestore 读取失败 / Firestore read failed: {dataError}
@@ -199,12 +246,22 @@ function PublicWarehousePage({ currentUser, dataError, isAdmin, warehouseData })
           <div className="min-w-0">
             <WarehouseMap
               data={warehouseData}
+              focusedCode={focusedCode}
+              largeText={largeText}
+              occupiedOnly={occupiedOnly}
               searchTerm={normalizedSearch}
               onSelectLocation={setSelectedLocation}
             />
           </div>
 
           <aside className="flex flex-col gap-4">
+            <LocateProduct
+              largeText={largeText}
+              results={searchResults}
+              searchTerm={searchTerm}
+              selectedCode={focusedCode}
+              onLocate={setFocusedCode}
+            />
             <div className="grid grid-cols-2 gap-2 text-sm">
               <SummaryCard label="SKU / Locations" value={summary.total} />
               <SummaryCard label="货架 / Racks" value={summary.racks} />
@@ -231,6 +288,27 @@ function SummaryCard({ label, value }) {
       <p className="mt-1 text-xl font-bold text-slate-950">{value}</p>
     </div>
   );
+}
+
+function useLocalStorageBoolean(key, initialValue) {
+  const [value, setValue] = useState(() => {
+    try {
+      const stored = window.localStorage.getItem(key);
+      return stored === null ? initialValue : stored === 'true';
+    } catch {
+      return initialValue;
+    }
+  });
+
+  useEffect(() => {
+    try {
+      window.localStorage.setItem(key, String(value));
+    } catch {
+      // Keep the UI usable if storage is unavailable.
+    }
+  }, [key, value]);
+
+  return [value, setValue];
 }
 
 function LoadingScreen() {

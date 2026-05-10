@@ -1,13 +1,17 @@
 import { Search, X } from 'lucide-react';
 
-function SearchBar({ searchTerm, onSearchChange, matchCount }) {
+function SearchBar({ largeText = false, searchTerm, onSearchChange, matchCount }) {
   const hasSearch = searchTerm.trim().length > 0;
 
   return (
     <section className="rounded-lg border border-slate-200 bg-white p-3 shadow-panel sm:p-4">
       <label
         htmlFor="model-search"
-        className="text-sm font-semibold text-slate-950"
+        className={
+          largeText
+            ? 'text-base font-bold text-slate-950'
+            : 'text-sm font-semibold text-slate-950'
+        }
       >
         搜索型号或货位 / Search Model or Location
       </label>
@@ -23,7 +27,10 @@ function SearchBar({ searchTerm, onSearchChange, matchCount }) {
             value={searchTerm}
             onChange={(event) => onSearchChange(event.target.value)}
             placeholder="例如 / Example: 3219D"
-            className="h-11 w-full rounded-md border border-slate-300 bg-white pl-10 pr-10 text-sm text-slate-950 outline-none transition focus:border-cyan-600 focus:ring-2 focus:ring-cyan-100"
+            className={[
+              'w-full rounded-md border border-slate-300 bg-white pl-10 pr-10 text-slate-950 outline-none transition focus:border-cyan-600 focus:ring-2 focus:ring-cyan-100',
+              largeText ? 'h-12 text-base font-semibold' : 'h-11 text-sm',
+            ].join(' ')}
           />
           {hasSearch ? (
             <button
@@ -37,7 +44,11 @@ function SearchBar({ searchTerm, onSearchChange, matchCount }) {
           ) : null}
         </div>
 
-        <div className="min-h-6 text-sm font-medium">
+        <div
+          className={
+            largeText ? 'min-h-6 text-base font-bold' : 'min-h-6 text-sm font-medium'
+          }
+        >
           {hasSearch && matchCount > 0 ? (
             <span className="text-emerald-700">
               找到 {matchCount} 个 / {matchCount} matched

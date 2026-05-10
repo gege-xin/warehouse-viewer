@@ -83,14 +83,21 @@ export function ForkliftAisle({ rack }) {
   );
 }
 
-function Rack({ rack, searchTerm, onSelectLocation }) {
+function Rack({
+  focusedCode,
+  largeText = false,
+  occupiedOnly = false,
+  rack,
+  searchTerm,
+  onSelectLocation,
+}) {
   const locations = buildLocations(rack);
 
   return (
     <article className="rounded-md border border-slate-200 bg-white p-3">
       <div className="mb-3 flex items-center justify-between gap-2">
         <div>
-          <h4 className="text-sm font-bold text-slate-950">
+          <h4 className={largeText ? 'text-base font-extrabold text-slate-950' : 'text-sm font-bold text-slate-950'}>
             {rack.rackName} / {rack.rackNameEn}
           </h4>
           <p className="mt-1 text-xs text-slate-500">
@@ -109,7 +116,10 @@ function Rack({ rack, searchTerm, onSelectLocation }) {
         {locations.map((location, index) => (
           <div key={location.code} style={getLocationGridPosition(rack, index)}>
             <LocationCell
+              focused={focusedCode === location.code}
+              largeText={largeText}
               location={location}
+              occupiedOnly={occupiedOnly}
               searchTerm={searchTerm}
               onClick={() => onSelectLocation(location)}
             />

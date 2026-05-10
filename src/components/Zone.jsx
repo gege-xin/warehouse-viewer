@@ -1,14 +1,21 @@
 import { Fragment } from 'react';
 import Rack from './Rack.jsx';
 
-function Zone({ zone, searchTerm, onSelectLocation }) {
+function Zone({
+  focusedCode,
+  largeText = false,
+  occupiedOnly = false,
+  zone,
+  searchTerm,
+  onSelectLocation,
+}) {
   const racks = zone.racks || [];
   const mainAisleIndex = Math.ceil(racks.length / 2);
 
   return (
     <section className="rounded-md border border-cyan-200 bg-cyan-50/70 p-3">
       <div className="mb-3 flex items-center justify-between gap-3">
-        <h3 className="text-sm font-bold text-cyan-950">
+        <h3 className={largeText ? 'text-lg font-extrabold text-cyan-950' : 'text-sm font-bold text-cyan-950'}>
           {zone.nameCn} / {zone.nameEn}
         </h3>
         <span className="text-xs font-medium text-cyan-800">
@@ -21,6 +28,9 @@ function Zone({ zone, searchTerm, onSelectLocation }) {
           <Fragment key={rack.rackName}>
             <Rack
               rack={rack}
+              focusedCode={focusedCode}
+              largeText={largeText}
+              occupiedOnly={occupiedOnly}
               searchTerm={searchTerm}
               onSelectLocation={(location) =>
                 onSelectLocation({

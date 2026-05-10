@@ -1,3 +1,5 @@
+import UnassignedBadge from './UnassignedBadge.jsx';
+
 export const statusStyles = {
   empty: 'border-slate-300 bg-white text-slate-700',
   occupied: 'border-emerald-600 bg-emerald-100 text-emerald-950',
@@ -87,29 +89,52 @@ export function locationMatches(location, searchTerm) {
   );
 }
 
-function LocationCell({ location, searchTerm, onClick }) {
+function LocationCell({
+  focused = false,
+  largeText = false,
+  location,
+  occupiedOnly = false,
+  searchTerm,
+  onClick,
+}) {
   const matched = locationMatches(location, searchTerm);
   const style = statusStyles[location.status] || statusStyles.empty;
+  const isUnassigned =
+    location.status === 'unassigned' ||
+    String(location.code || '').toUpperCase().startsWith('TEMP-');
+  const dimmed =
+    occupiedOnly && location.status !== 'occupied' && !matched && !focused;
 
   return (
     <button
       type="button"
+      data-location-code={location.code}
       data-search-match={matched ? 'true' : undefined}
       onClick={onClick}
       className={[
-        'flex h-full min-h-[64px] flex-col justify-between rounded-md border p-2 text-left text-[11px] transition hover:-translate-y-0.5 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-cyan-500 sm:min-h-[76px] sm:text-xs',
+        'flex h-full min-h-[64px] flex-col justify-between rounded-md border p-2 text-left transition hover:-translate-y-0.5 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-cyan-500 sm:min-h-[76px]',
+        largeText ? 'text-sm sm:text-base' : 'text-[11px] sm:text-xs',
         style,
+        isUnassigned ? 'border-amber-500 bg-amber-100' : '',
         matched ? 'ring-4 ring-amber-400 ring-offset-2' : '',
+        focused ? 'auto-locate-pulse ring-4 ring-amber-400 ring-offset-2' : '',
+        dimmed ? 'opacity-25 grayscale' : '',
       ].join(' ')}
     >
       <span className="font-bold leading-tight">{location.code}</span>
-      <span className="line-clamp-1 break-all font-semibold">
+      <span
+        className={[
+          'line-clamp-2 break-all',
+          largeText ? 'font-extrabold leading-tight' : 'font-semibold',
+        ].join(' ')}
+      >
         {location.model || '-'}
       </span>
       <span className="flex items-center justify-between gap-1 text-[10px] sm:text-[11px]">
         <span>{location.qty} 件 / pcs</span>
         {location.colorCode ? <span>{location.colorCode}</span> : null}
       </span>
+      {isUnassigned ? <UnassignedBadge compact /> : null}
     </button>
   );
 }

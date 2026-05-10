@@ -1,8 +1,12 @@
 import { X } from 'lucide-react';
 import { statusLabels } from './LocationCell.jsx';
+import UnassignedBadge from './UnassignedBadge.jsx';
 
 function LocationModal({ location, onClose }) {
   if (!location) return null;
+  const isUnassigned =
+    location.status === 'unassigned' ||
+    String(location.code || '').toUpperCase().startsWith('TEMP-');
 
   const rows = [
     ['区域 / Zone', `${location.zoneNameCn} / ${location.zoneNameEn}`],
@@ -17,6 +21,13 @@ function LocationModal({ location, onClose }) {
     ['状态 / Status', statusLabels[location.status] || location.status],
     ['备注 / Note', location.note || '-'],
   ];
+
+  if (isUnassigned) {
+    rows[0] = ['鍖哄煙 / Zone', '待整理区 / Staging Area'];
+    rows[1] = ['璐ф灦 / Rack', '待分配 / Pending Location'];
+    rows[2] = ['璐т綅 / Location', '待分配 / Pending Location'];
+    rows[9] = ['鐘舶€?/ Status', '未上架 / Unassigned'];
+  }
 
   return (
     <div
@@ -42,6 +53,11 @@ function LocationModal({ location, onClose }) {
             >
               {location.model || location.code}
             </h2>
+            {isUnassigned ? (
+              <div className="mt-3">
+                <UnassignedBadge />
+              </div>
+            ) : null}
           </div>
           <button
             type="button"

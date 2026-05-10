@@ -86,6 +86,29 @@ export async function saveWarehouseItem(item) {
   );
 }
 
+export async function saveWarehouseItemsBatch(items) {
+  if (!db) throw new Error('Firebase is not configured.');
+  if (!items.length) return;
+
+  const batch = writeBatch(db);
+  const updatedAt = new Date().toISOString();
+
+  items.forEach((item) => {
+    if (!item.id) throw new Error('Missing Firestore document id.');
+    const { id, ...payload } = item;
+    batch.set(
+      doc(db, collectionName, id),
+      {
+        ...payload,
+        updatedAt,
+      },
+      { merge: true },
+    );
+  });
+
+  await batch.commit();
+}
+
 export async function patchWarehouseItem(id, payload) {
   if (!db) throw new Error('Firebase is not configured.');
 

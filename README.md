@@ -139,6 +139,24 @@ warehouseLocations
 - `cabinetModel`: 柜体型号
 - `colorCode`: 门板颜色代码
 
+## 管理员拖拽调整货位
+
+管理员登录 `/admin` 后，可以点击：
+
+```text
+开启拖拽 / Drag Mode Off
+```
+
+开启拖拽模式后：
+
+- 拖动有 SKU 的货位到空位：SKU 会移动到目标货位，原货位变为空位
+- 拖动有 SKU 的货位到另一个有 SKU 的货位：系统会询问是否交换两个货位
+- 确认交换后会用 Firestore batch 同时保存受影响的区域文档
+- 保存失败时不会改本地数据，并会显示错误提示
+- 当前数据结构只使用 `code` 表示货位；如果某条记录本身已有 `location` 字段，拖拽时会同步更新它
+
+普通首页 `/` 没有拖拽能力，Firestore Rules 仍然只允许 `cherryliao43@gmail.com` 写入。
+
 ## 状态颜色
 
 - `empty`: 空位 / Empty，白色

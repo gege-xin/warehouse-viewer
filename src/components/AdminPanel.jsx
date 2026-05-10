@@ -10,6 +10,7 @@ import {
   seedWarehouseData,
 } from '../lib/warehouseService.js';
 import { statusOptions } from './LocationCell.jsx';
+import AdminDragWarehouse from './AdminDragWarehouse.jsx';
 
 const emptyLocation = {
   code: '',
@@ -28,6 +29,7 @@ function AdminPanel({ currentUser, warehouseData }) {
   const [selectedDocId, setSelectedDocId] = useState('');
   const [message, setMessage] = useState('');
   const [saving, setSaving] = useState(false);
+  const [dragMode, setDragMode] = useState(false);
 
   const zones = useMemo(
     () => warehouseData.filter((item) => item.type === 'zone'),
@@ -128,6 +130,20 @@ function AdminPanel({ currentUser, warehouseData }) {
           <div className="grid gap-2">
             <button
               type="button"
+              onClick={() => setDragMode((value) => !value)}
+              className={[
+                'h-10 rounded-md px-3 text-sm font-semibold',
+                dragMode
+                  ? 'bg-amber-500 text-amber-950'
+                  : 'border border-slate-300 bg-white text-slate-800',
+              ].join(' ')}
+            >
+              {dragMode
+                ? '关闭拖拽 / Drag Mode On'
+                : '开启拖拽 / Drag Mode Off'}
+            </button>
+            <button
+              type="button"
               disabled={saving || !hasFirebaseConfig}
               onClick={() =>
                 runAction(() => seedWarehouseData(), '已分配 SKU 数据已导入 / Seeded')
@@ -193,7 +209,9 @@ function AdminPanel({ currentUser, warehouseData }) {
         </aside>
 
         <section className="min-w-0">
-          {editableItem?.type === 'zone' ? (
+          {dragMode ? (
+            <AdminDragWarehouse warehouseData={warehouseData} />
+          ) : editableItem?.type === 'zone' ? (
             <ZoneEditor
               key={editableItem.id || editableItem.nameEn}
               disabled={saving || !hasFirebaseConfig}

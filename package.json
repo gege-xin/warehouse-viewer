@@ -11,18 +11,19 @@
     "import:seed": "node scripts/importFirestoreSeed.mjs"
   },
   "dependencies": {
+    "@dnd-kit/core": "^6.3.1",
     "firebase": "^12.0.0",
+    "lucide-react": "^0.468.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-router-dom": "^7.0.0",
-    "lucide-react": "^0.468.0"
+    "react-router-dom": "^7.0.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^5.0.0",
     "autoprefixer": "^10.4.20",
+    "firebase-admin": "^13.0.0",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.17",
-    "vite": "^7.0.0",
-    "firebase-admin": "^13.0.0"
+    "vite": "^7.0.0"
   }
 }

@@ -14,6 +14,7 @@ import {
   getRackGridTemplateColumns,
 } from './Rack.jsx';
 import DraggableLocationCell from './DraggableLocationCell.jsx';
+import { useDragScroll } from '../hooks/useDragScroll.js';
 import { useAdminDragMove } from '../hooks/useAdminDragMove.js';
 
 function AdminDragWarehouse({ warehouseData }) {
@@ -21,6 +22,7 @@ function AdminDragWarehouse({ warehouseData }) {
   const [notice, setNotice] = useState('');
   const { error, moving, moveProduct, setError } = useAdminDragMove(warehouseData);
   const layoutRows = buildWarehouseLayoutRows(warehouseData);
+  const { dragScrollProps, isDragging } = useDragScroll({ ignoreInteractive: true });
   const sensors = useSensors(
     useSensor(PointerSensor, {
       activationConstraint: { distance: 8 },
@@ -95,8 +97,14 @@ function AdminDragWarehouse({ warehouseData }) {
         onDragCancel={() => setActiveLocation(null)}
         onDragEnd={handleDragEnd}
       >
-        <div className="overflow-x-auto pb-2 [-webkit-overflow-scrolling:touch]">
-          <div className="flex min-w-[760px] flex-col gap-4 sm:min-w-[920px]">
+        <div
+          {...dragScrollProps}
+          className={[
+            'warehouse-scroll w-full overflow-x-auto overflow-y-auto pb-3 touch-pan-x select-none',
+            isDragging ? 'cursor-grabbing' : 'cursor-grab',
+          ].join(' ')}
+        >
+          <div className="flex min-w-max flex-col gap-4">
             {layoutRows.map((item, index) => {
               if (item.type === 'aisle') {
                 return (

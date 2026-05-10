@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import Zone from './Zone.jsx';
+import { useDragScroll } from '../hooks/useDragScroll.js';
 
 function WarehouseMap({
   data,
@@ -11,14 +12,15 @@ function WarehouseMap({
 }) {
   const mapRef = useRef(null);
   const layoutRows = buildWarehouseLayoutRows(data);
+  const { dragScrollProps, isDragging, scrollRef } = useDragScroll();
 
   useEffect(() => {
-    if (!mapRef.current) return;
+    if (!scrollRef.current) return;
 
     const target = focusedCode
-      ? mapRef.current.querySelector(`[data-location-code="${CSS.escape(focusedCode)}"]`)
+      ? scrollRef.current.querySelector(`[data-location-code="${CSS.escape(focusedCode)}"]`)
       : searchTerm
-        ? mapRef.current.querySelector('[data-search-match="true"]')
+        ? scrollRef.current.querySelector('[data-search-match="true"]')
         : null;
 
     target?.scrollIntoView({
@@ -26,7 +28,7 @@ function WarehouseMap({
       block: 'center',
       inline: 'center',
     });
-  }, [focusedCode, searchTerm, data]);
+  }, [focusedCode, searchTerm, data, scrollRef]);
 
   return (
     <section className="rounded-lg border border-slate-200 bg-white p-3 shadow-panel sm:p-4">
@@ -39,8 +41,18 @@ function WarehouseMap({
         </span>
       </div>
 
-      <div className="overflow-x-auto pb-2 [-webkit-overflow-scrolling:touch]" ref={mapRef}>
-        <div className="flex min-w-[760px] flex-col gap-4 sm:min-w-[920px]">
+      <div
+        {...dragScrollProps}
+        className={[
+          'warehouse-scroll w-full overflow-x-auto overflow-y-auto pb-3 touch-pan-x select-none',
+          isDragging ? 'cursor-grabbing' : 'cursor-grab',
+        ].join(' ')}
+        ref={(node) => {
+          mapRef.current = node;
+          scrollRef.current = node;
+        }}
+      >
+        <div className="flex min-w-max flex-col gap-4">
           {layoutRows.map((item, index) => {
             if (item.type === 'aisle') {
               return (

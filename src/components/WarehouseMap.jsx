@@ -33,7 +33,13 @@ function WarehouseMap({
   return (
     <section className="rounded-lg border border-slate-200 bg-white p-3 shadow-panel sm:p-4">
       <div className="mb-3 flex items-center justify-between gap-3">
-          <h2 className={largeText ? 'text-xl font-bold text-slate-950' : 'text-base font-semibold text-slate-950'}>
+        <h2
+          className={
+            largeText
+              ? 'text-xl font-bold text-slate-950'
+              : 'text-base font-semibold text-slate-950'
+          }
+        >
           仓库平面图 / Warehouse Layout
         </h2>
         <span className="text-xs font-medium text-slate-500">
@@ -82,6 +88,17 @@ function WarehouseMap({
 }
 
 export function buildWarehouseLayoutRows(data) {
+  if (data.some((item) => item.type === 'aisle')) {
+    return data.map((item) =>
+      item.type === 'aisle'
+        ? {
+            ...item,
+            aisleType: item.aisleType || inferAisleType(item),
+          }
+        : item,
+    );
+  }
+
   const zonesByLetter = new Map();
   const zoneRows = ['A', 'B', 'C', 'D', 'E', 'F'];
 
@@ -104,6 +121,13 @@ export function buildWarehouseLayoutRows(data) {
 
     return next ? [zone, next] : [zone];
   });
+}
+
+function inferAisleType(aisle) {
+  const text = `${aisle.nameCn || ''} ${aisle.nameEn || ''}`.toLowerCase();
+  if (text.includes('main') || text.includes('主')) return 'main';
+  if (text.includes('forklift') || text.includes('叉车')) return 'forklift';
+  return 'normal';
 }
 
 function getZoneLetter(zone) {
@@ -140,16 +164,29 @@ function createAisle(aisleType, order) {
 
 export function AisleBand({ aisle }) {
   const isMain = aisle.aisleType === 'main' || aisle.nameEn === 'Main Aisle';
+  const isForklift =
+    aisle.aisleType === 'forklift' || aisle.nameEn === 'Forklift Aisle';
   const className = isMain
     ? 'h-24 border-slate-600 bg-slate-300 text-slate-900'
-    : 'h-16 border-slate-400 bg-slate-200 text-slate-700';
+    : isForklift
+      ? 'h-16 border-slate-400 bg-slate-200 text-slate-700'
+      : 'h-12 border-slate-300 bg-slate-100 text-slate-600';
+  const label =
+    aisle.nameCn && aisle.nameEn
+      ? `${aisle.nameCn} / ${aisle.nameEn}`
+      : isMain
+        ? '主走廊 / Main Aisle'
+        : isForklift
+          ? '叉车通道 / Forklift Aisle'
+          : '走廊 / Aisle';
 
   return (
     <div
       className={`flex items-center justify-center rounded-md border border-dashed px-4 text-sm font-bold ${className}`}
-      aria-label={`${aisle.nameCn} / ${aisle.nameEn}`}
+      style={aisle.heightPx ? { height: `${aisle.heightPx}px` } : undefined}
+      aria-label={label}
     >
-      {isMain ? '主走廊 / Main Aisle' : '叉车通道 / Forklift Aisle'}
+      {label}
     </div>
   );
 }

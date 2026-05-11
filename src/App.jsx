@@ -66,11 +66,17 @@ function getSearchResults(data, normalizedSearch) {
 }
 
 function sortSearchResults(results) {
+  const statusRank = {
+    occupied: 0,
+    reserved: 1,
+    unassigned: 2,
+    empty: 3,
+    disabled: 4,
+  };
+
   return [...results].sort((a, b) => {
-    const aUnassigned = a.status === 'unassigned' ? 0 : 1;
-    const bUnassigned = b.status === 'unassigned' ? 0 : 1;
     return (
-      aUnassigned - bUnassigned ||
+      (statusRank[a.status] ?? 9) - (statusRank[b.status] ?? 9) ||
       String(a.model || '').localeCompare(String(b.model || ''))
     );
   });

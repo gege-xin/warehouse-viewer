@@ -11,6 +11,7 @@ import {
 } from '../lib/warehouseService.js';
 import { statusOptions } from './LocationCell.jsx';
 import AdminDragWarehouse from './AdminDragWarehouse.jsx';
+import AdminLayoutEditor from './AdminLayoutEditor.jsx';
 
 const emptyLocation = {
   code: '',
@@ -29,11 +30,17 @@ function AdminPanel({ currentUser, warehouseData }) {
   const [selectedDocId, setSelectedDocId] = useState('');
   const [message, setMessage] = useState('');
   const [saving, setSaving] = useState(false);
-  const [dragMode, setDragMode] = useState(false);
+  const [activeMode, setActiveMode] = useState('edit');
+  const [adminSearch, setAdminSearch] = useState('');
+  const [statusFilter, setStatusFilter] = useState('all');
 
   const zones = useMemo(
     () => warehouseData.filter((item) => item.type === 'zone'),
     [warehouseData],
+  );
+  const filteredWarehouseData = useMemo(
+    () => filterWarehouseItems(warehouseData, adminSearch, statusFilter),
+    [adminSearch, statusFilter, warehouseData],
   );
 
   const selectedItem =
@@ -62,7 +69,7 @@ function AdminPanel({ currentUser, warehouseData }) {
           nameCn: '新区',
           nameEn: 'New Zone',
           racks: [],
-        }),
+        }, currentUser.email),
       '已新增区域 / Zone added',
     );
   }
@@ -75,7 +82,7 @@ function AdminPanel({ currentUser, warehouseData }) {
           order: warehouseData.length + 1,
           nameCn: '新走廊',
           nameEn: 'New Aisle',
-        }),
+        }, currentUser.email),
       '已新增走廊 / Aisle added',
     );
   }
@@ -130,17 +137,39 @@ function AdminPanel({ currentUser, warehouseData }) {
           <div className="grid gap-2">
             <button
               type="button"
-              onClick={() => setDragMode((value) => !value)}
+              onClick={() =>
+                setActiveMode((value) =>
+                  value === 'product-drag' ? 'edit' : 'product-drag',
+                )
+              }
               className={[
                 'h-10 rounded-md px-3 text-sm font-semibold',
-                dragMode
+                activeMode === 'product-drag'
                   ? 'bg-amber-500 text-amber-950'
                   : 'border border-slate-300 bg-white text-slate-800',
               ].join(' ')}
             >
-              {dragMode
-                ? '关闭拖拽 / Drag Mode On'
-                : '开启拖拽 / Drag Mode Off'}
+              {activeMode === 'product-drag'
+                ? '?????? / Product Drag On'
+                : '?????? / Product Drag Mode'}
+            </button>
+            <button
+              type="button"
+              onClick={() =>
+                setActiveMode((value) =>
+                  value === 'layout-edit' ? 'edit' : 'layout-edit',
+                )
+              }
+              className={[
+                'h-10 rounded-md px-3 text-sm font-semibold',
+                activeMode === 'layout-edit'
+                  ? 'bg-cyan-600 text-white'
+                  : 'border border-slate-300 bg-white text-slate-800',
+              ].join(' ')}
+            >
+              {activeMode === 'layout-edit'
+                ? '?????? / Layout Edit On'
+                : '?????? / Edit Warehouse Layout'}
             </button>
             <button
               type="button"
@@ -173,7 +202,24 @@ function AdminPanel({ currentUser, warehouseData }) {
           </div>
 
           <div className="mt-5 grid gap-2">
-            {warehouseData.map((item) => (
+            <div className="grid gap-2 rounded-md border border-slate-200 bg-slate-50 p-3">
+              <TextField
+                label="搜索后台数据 / Search admin data"
+                value={adminSearch}
+                onChange={setAdminSearch}
+              />
+              <SelectField
+                label="状态筛选 / Status filter"
+                value={statusFilter}
+                options={[{ value: 'all', label: '全部 / All' }, ...statusOptions]}
+                onChange={setStatusFilter}
+              />
+              <p className="text-xs font-semibold text-slate-500">
+                {filteredWarehouseData.length} / {warehouseData.length} documents
+              </p>
+            </div>
+
+            {filteredWarehouseData.map((item) => (
               <button
                 key={item.id || `${item.type}-${item.order}`}
                 type="button"
@@ -209,8 +255,13 @@ function AdminPanel({ currentUser, warehouseData }) {
         </aside>
 
         <section className="min-w-0">
-          {dragMode ? (
+          {activeMode === 'product-drag' ? (
             <AdminDragWarehouse warehouseData={warehouseData} />
+          ) : activeMode === 'layout-edit' ? (
+            <AdminLayoutEditor
+              currentUser={currentUser}
+              warehouseData={warehouseData}
+            />
           ) : editableItem?.type === 'zone' ? (
             <ZoneEditor
               key={editableItem.id || editableItem.nameEn}
@@ -259,7 +310,7 @@ function ZoneEditor({ disabled, zone, onDelete, onSave }) {
           rackName: `New Rack ${(current.racks || []).length + 1}`,
           rackNameEn: `Rack ${(current.racks || []).length + 1}`,
           columns: 5,
-          levels: 4,
+          levels: 3,
           locations: [],
         },
       ],
@@ -273,7 +324,7 @@ function ZoneEditor({ disabled, zone, onDelete, onSave }) {
         subtitle="可修改区域、货架、货位和 SKU 数据。"
         disabled={disabled}
         onDelete={onDelete}
-        onSave={() => onSave(draft)}
+        onSave={() => onSave(normalizeAdminItemForSave(draft))}
       />
 
       <div className="mt-4 grid gap-3 sm:grid-cols-3">
@@ -578,6 +629,57 @@ function SelectField({ label, value, options, onChange }) {
       </select>
     </label>
   );
+}
+
+function filterWarehouseItems(items, searchTerm, statusFilter) {
+  const normalizedSearch = searchTerm.trim().toLowerCase();
+
+  return items.filter((item) => {
+    const matchesStatus =
+      statusFilter === 'all' ||
+      (item.type === 'zone' &&
+        (item.racks || []).some((rack) =>
+          (rack.locations || []).some((location) => location.status === statusFilter),
+        ));
+
+    if (!matchesStatus) return false;
+    if (!normalizedSearch) return true;
+
+    return getAdminSearchText(item).includes(normalizedSearch);
+  });
+}
+
+function getAdminSearchText(item) {
+  const zoneText = [item.nameCn, item.nameEn, item.type, item.aisleType].filter(Boolean);
+  const rackText = (item.racks || []).flatMap((rack) => [
+    rack.rackName,
+    rack.rackNameEn,
+    ...(rack.locations || []).flatMap((location) => [
+      location.code,
+      location.model,
+      location.type,
+      location.category,
+      location.cabinetModel,
+      location.colorCode,
+      location.colorName,
+      location.status,
+      location.note,
+    ]),
+  ]);
+
+  return [...zoneText, ...rackText].filter(Boolean).join(' ').toLowerCase();
+}
+
+function normalizeAdminItemForSave(item) {
+  if (item.type !== 'zone') return item;
+
+  return {
+    ...item,
+    racks: (item.racks || []).map((rack) => ({
+      ...rack,
+      levels: 3,
+    })),
+  };
 }
 
 export default AdminPanel;
